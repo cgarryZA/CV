@@ -38,7 +38,7 @@ It formalises the tools I use at work and in personal research: probabilistic mo
 - **Robust deployments:** tested, documented tooling that moves cleanly from research to production.  
 - Bread-and-butter foundations reinforced: **Bayesian inference**, **supervised/unsupervised learning**, **stochastic modelling**, and **time-series-aware evaluation**.
 
-> _This entry is cross-linked to my primary CV and will be expanded with project artefacts (reports, repos, benchmarks) as modules progress._
+> _This entry will be expanded with project artefacts (reports, repos, benchmarks) as modules progress._
 
 ---
 
