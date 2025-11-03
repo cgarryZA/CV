@@ -7,7 +7,7 @@ section: Education
 institution: Durham University
 location: Durham, United Kingdom
 period: Sep 2020 – Jun 2024
-links.linkedin: https://www.linkedin.com/in/christian-tt-garry/
+links.linkedin:
 links.github:
 cover: assets\durham_university_logo.jpeg
 cv: true

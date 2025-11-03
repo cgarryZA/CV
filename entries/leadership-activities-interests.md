@@ -4,7 +4,7 @@ title: Leadership, Activities & Interests
 date: 2001-08-14
 type: profile
 section: Leadership & Interests
-links.linkedin: https://www.linkedin.com/in/christian-tt-garry/
+links.linkedin:
 links.github:
 cv: true
 cv_section: leadership

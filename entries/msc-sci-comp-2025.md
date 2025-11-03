@@ -8,7 +8,7 @@ institution: Durham University
 location: Durham, United Kingdom
 period: Sep 2025 – Present
 # Optional deep-links (shown as badges if present)
-links.linkedin: https://www.linkedin.com/in/christian-tt-garry/
+links.linkedin:
 links.github:
 cover: assets\durham_university_logo.jpeg
 cv: true

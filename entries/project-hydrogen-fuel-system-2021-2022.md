@@ -7,7 +7,7 @@ section: Research
 institution: Durham University
 location: Durham, United Kingdom
 period: Oct 2021 – Apr 2022
-links.linkedin: https://www.linkedin.com/in/christian-tt-garry/
+links.linkedin:
 links.github:
 links.education: ./meng-electronic-2024.md
 cover: assets\durham_university_logo.jpeg
