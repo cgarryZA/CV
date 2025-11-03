@@ -11,7 +11,11 @@ cv_section: leadership
 tags: [Leadership, Activities, Interests, Fencing, Quant, Durham]
 ---
 
+### Head
+
 ### Leadership, Activities & Interests
+
+### Body
 
 **Leadership**  
 - **Industrial Tutor — Durham University (Sep 2025 – Present):** Lead weekly design tutorials; mentor teams on scope, feasibility, and Gantt planning; mark feasibility and final submissions with quantitative, structured feedback. Emphasis on surfacing assumptions, testing them, and retiring designs that fail cost/risk/performance constraints.  

@@ -12,11 +12,14 @@ cover: assets/durham_university_logo.jpeg
 cv: true
 tags: [Teaching, Engineering Design, Feasibility, Project Management, Quantitative Reasoning]
 ---
+### Head
 
 ### Industrial Tutor — Durham University (Engineering)
 *Sep 2025 – Present | On‑site, part‑time*
 
 I lead weekly project tutorials for undergraduate design teams and act as an industry mentor. The emphasis is on **quantitative decision‑making under constraints** and communicating engineering reasoning clearly.
+
+### Body
 
 **What I do**
 - Guide teams through structured milestones: **Gantt planning, feasibility studies, design reviews**, and checkpoint retros.

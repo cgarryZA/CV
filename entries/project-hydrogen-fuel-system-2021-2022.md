@@ -14,8 +14,12 @@ cover: assets\durham_university_logo.jpeg
 tags: [Team Project, Hydrogen, Cryogenics, Sensors, Aerospace]
 ---
 
+### Head
+
 ### Hydrogen Fuel System for Gas Turbines — Year 2 Project  
 *Team of 5; cryogenic storage, sensing, and safety systems for passenger jets*
+
+### Body
 
 **My focus**  
 - Designed **leak detection** architecture and integrated **tank sensors** for temperature, pressure, and level monitoring.  

@@ -13,11 +13,14 @@ cover: assets\cs2_market_cover.jpeg
 cv: true
 tags: [Research, CS2, CSGO, Market Microstructure, Liquidity, Execution, Backtesting, Python, C++]
 ---
+### Head
 
 ### CS2/CS:GO Market Analytics & Trading Research  
 *Pricing, liquidity, and execution across fragmented digital-asset venues (work in progress)*
 
 Ongoing research project studying **pricing**, **liquidity**, and **market microstructure** across the major CS2/CS:GO marketplaces. The focus is on **clean ETL**, **fee/FX normalisation**, and **execution-aware backtests** that reflect realistic frictions.
+
+### Body
 
 **What I’m building**  
 - **Unified data pipeline** → ingestion, validation, and **normalised dataset** for cross‑venue analysis.  

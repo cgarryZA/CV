@@ -14,8 +14,12 @@ cv: true
 tags: [C/C++, Networking, TCP/IP, IEC 60870, DNP3, Protocols, Systems, Python, RAG, Qdrant, LLM]
 ---
 
+### Head
+
 ### Graduate Communications Engineer — Siemens PLC  
 *Sep 2024 – Present | On‑site (Hebburn)*
+
+### Body
 
 **Systems/Networking**  
 - Built **latency‑sensitive C/C++ stacks** for industrial relays (TCP/IP, **IEC 60870**, **DNP3**); emphasis on **determinism**, **fault‑tolerance**, and profiling‑driven performance.  

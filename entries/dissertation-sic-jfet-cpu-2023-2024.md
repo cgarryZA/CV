@@ -14,11 +14,14 @@ cover: assets\durham_university_logo.jpeg
 cv: true
 tags: [Research, Electronics, SiC, JFET, CPU, LTspice, Compilers]
 ---
+### Head
 
 ### Silicon Carbide JFET CPU — Master’s Dissertation  
 *Extreme‑environment computing; device‑level logic to system‑level toolchain*
 
 Built a custom **4‑bit CPU** in **LTspice** using **SiC JFET logic** targeting **high‑temperature and radiation** environments. Delivered an **end‑to‑end toolchain**: C‑like language & compiler (**C++**), assembler, and **Python** scripts to generate PWL stimuli for simulation.
+
+### Body
 
 **What I did**  
 - Designed **NAND/NOR/XOR** JFET logic and **custom transistor‑optimised gates** (e.g., **carry‑lookahead adder** blocks).  

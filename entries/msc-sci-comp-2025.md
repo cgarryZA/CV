@@ -15,10 +15,14 @@ cv: true
 tags: [MSc, Durham, Scientific Computing, AI, HPC, Education]
 ---
 
+### Head
+
 ### MSc Scientific Computing & Data Analysis (AI for Engineering) — Durham University  
 *Started Sep 2025 (concurrent with role at Siemens, Durham, UK)*
 
 I started the MSc in September 2025. My focus is on **statistical inference, optimisation, numerical linear algebra, and high-performance/GPU computing**, with an eye to writing numerically stable, production-grade code. I’m doing the degree alongside my work at Siemens, so I’m being disciplined with time-management and shipping work that’s useful.
+
+### Body
 
 **Modules (AI for Engineering stream)**  
 - **Core:** Introduction to Machine Learning & Statistics; Introduction to Scientific & High-Performance Computing; Professional Skills; MISCADA Project.  

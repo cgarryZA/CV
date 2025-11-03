@@ -14,8 +14,12 @@ cover: assets\durham_university_logo.jpeg
 tags: [Team Project, EV, Control, Power Electronics, VFD]
 ---
 
+### Head
+
 ### Electronic Differential System for EVs — Year 3 Project  
 *Team of 6; torque vectoring and cost‑reduced drivetrain architecture*
+
+### Body
 
 **What I did**  
 - Designed **electronic differential** and **torque‑vectoring** concept to reduce mass and BOM vs. mechanical diffs.  
