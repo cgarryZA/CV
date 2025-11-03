@@ -12,6 +12,7 @@ cover: assets/durham_university_logo.jpeg
 cv: true
 tags: [Teaching, Engineering Design, Feasibility, Project Management, Quantitative Reasoning]
 ---
+
 ### Head
 
 ### Industrial Tutor — Durham University (Engineering)
