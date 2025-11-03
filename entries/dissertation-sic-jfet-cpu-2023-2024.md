@@ -11,6 +11,7 @@ links.linkedin: https://www.linkedin.com/in/christian-tt-garry/
 links.github:
 links.education: ./meng-electronic-2024.md
 cover: assets\durham_university_logo.jpeg
+cv: true
 tags: [Research, Electronics, SiC, JFET, CPU, LTspice, Compilers]
 ---
 
@@ -53,5 +54,6 @@ I recieved 84% for my final report which was one of the highest in the cohort.
         \item Developed complete toolchain: C-like compiler (C++), assembler, and Python automation scripts.
     \end{highlights}
 \end{onecolentry}
+
 
 ```

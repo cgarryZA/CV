@@ -10,6 +10,7 @@ period: Sep 2020 – Jun 2024
 links.linkedin: https://www.linkedin.com/in/christian-tt-garry/
 links.github:
 cover: assets\durham_university_logo.jpeg
+cv: true
 tags: [MEng, Durham, Electronic Engineering, Communications, Embedded, Education]
 ---
 

@@ -11,6 +11,7 @@ period: Sep 2025 – Present
 links.linkedin: https://www.linkedin.com/in/christian-tt-garry/
 links.github:
 cover: assets\durham_university_logo.jpeg
+cv: true
 tags: [MSc, Durham, Scientific Computing, AI, HPC, Education]
 ---
 

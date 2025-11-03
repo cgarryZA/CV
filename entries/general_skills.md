@@ -6,6 +6,7 @@ type: skills
 section: Skills
 links.linkedin:
 links.github:
+cv: true
 tags: [Skills, Quant, Engineering, HPC, ML, C++, Python]
 ---
 
@@ -45,22 +46,18 @@ Clear documentation & reporting; independent project ownership; collaborative te
 
 ```latex
 \begin{onecolentry}
-  \textbf{Maths \& Optimisation:} Probability \& statistics; numerical methods; convex/non-linear optimisation; decision-making under uncertainty; experimental design \& fast iteration.
+\textbf{Maths \& Optimisation:} Probability \& statistics; Numerical methods; Convex/non-linear optimisation; Decision-making under uncertainty; Experimental design \& fast iteration.
 \end{onecolentry}
 
 \begin{onecolentry}
-  \textbf{Systems \& Performance:} HPC/GPU mindset; vectorisation \& profiling; simulation \& automated testing; networking (IEC 60870, DNP3).
+\textbf{Systems \& Performance:} HPC/GPU; Simulation \& automated testing; Networking (IEC 60870, DNP3).
 \end{onecolentry}
 
 \begin{onecolentry}
-  \textbf{Machine Learning:} Bayesian inference; regression \& classification; unsupervised learning (clustering, PCA); model evaluation \& calibration; robustness \& traceability; RAG/LLM pipelines.
+\textbf{Machine Learning:} Bayesian inference; Regression \& classification; Unsupervised learning (clustering, PCA); Deep learning for engineering; Model evaluation \& calibration; robustness \& traceability; RAG/LLM pipelines.
 \end{onecolentry}
 
 \begin{onecolentry}
-  \textbf{Programming:} C++, Python, SQL, C, C\#, MATLAB.
-\end{onecolentry}
-
-\begin{onecolentry}
-  \textbf{Domains:} High-Performance Computing; Embedded Systems; Networking (IEC 60870, DNP3); RAG/LLM Systems.
+\textbf{Programming:} C++, Python, SQL, C, C\#, MATLAB.
 \end{onecolentry}
 ```
