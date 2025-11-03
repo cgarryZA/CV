@@ -1,7 +1,7 @@
 ---
 id: project-hydrogen-fuel-system-2021-2022
 title: Hydrogen Fuel System for Gas Turbines (Y2 Project)
-date: 2025-11-03
+date: 2021-10-01
 type: project
 section: Research
 institution: Durham University

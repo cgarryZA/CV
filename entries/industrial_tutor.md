@@ -1,7 +1,7 @@
 ---
 id: industrial-tutor-2025
 title: Industrial Tutor – Engineering Management & Manufacturing
-date: 2025-11-03
+date: 2025-10-01
 type: experience
 section: Experience
 employer: Durham University, Department of Engineering

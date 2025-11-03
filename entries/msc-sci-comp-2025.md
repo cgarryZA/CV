@@ -1,7 +1,7 @@
 ---
 id: msc-sci-comp-2025
 title: MSc Scientific Computing & Data Analysis (AI for Engineering)
-date: 2025-11-03
+date: 2025-09-01
 type: education
 section: Education
 institution: Durham University

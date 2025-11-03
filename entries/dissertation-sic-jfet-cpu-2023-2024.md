@@ -1,7 +1,7 @@
 ---
 id: dissertation-sic-jfet-cpu-2023-2024
 title: Silicon Carbide JFET CPU (Master’s Dissertation)
-date: 2025-11-03
+date: 2023-10-01
 type: research
 section: Research
 institution: Durham University

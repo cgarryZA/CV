@@ -1,7 +1,7 @@
 ---
 id: project-ev-electronic-differential-2022-2023
 title: Electronic Differential System for Electric Vehicles (Y3 Project)
-date: 2025-11-03
+date: 2022-10-01
 type: project
 section: Research
 institution: Durham University

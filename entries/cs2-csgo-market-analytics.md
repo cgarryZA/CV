@@ -1,7 +1,7 @@
 ---
 id: cs2-market-analytics-2025
 title: CS2/CS:GO Market Analytics & Trading Research
-date: 2025-11-03
+date: 2025-08-01
 type: research
 section: Research
 institution: Independent Project

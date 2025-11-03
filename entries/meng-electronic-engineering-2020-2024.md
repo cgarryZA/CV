@@ -1,7 +1,7 @@
 ---
 id: meng-electronic-engineering-2020-2024
 title: MEng Electronic Engineering
-date: 2025-11-03
+date: 2020-09-01
 type: education
 section: Education
 institution: Durham University
