@@ -1,7 +1,7 @@
 ---
 id: leadership-activities-interests-2025
 title: Leadership, Activities & Interests
-date: 2025-11-03
+date: 2001-08-14
 type: profile
 section: Leadership & Interests
 links.linkedin: https://www.linkedin.com/in/christian-tt-garry/

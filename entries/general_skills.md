@@ -1,7 +1,7 @@
 ---
 id: general-skills-2025
 title: General Skills
-date: 2025-11-03
+date: 2001-08-14
 type: skills
 section: Skills
 links.linkedin:
