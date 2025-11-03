@@ -12,6 +12,8 @@ links.github:
 links.education: ./meng-electronic-2024.md
 cover: assets\durham_university_logo.jpeg
 tags: [Team Project, Hydrogen, Cryogenics, Sensors, Aerospace]
+
+asset: assets/AHTB2_Final_Design_Report.pdf
 ---
 
 ### Head

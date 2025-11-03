@@ -12,6 +12,8 @@ links.github:
 links.education: ./meng-electronic-2024.md
 cover: assets\durham_university_logo.jpeg
 tags: [Team Project, EV, Control, Power Electronics, VFD]
+
+asset: assets/GLIKR1-Final_Design_Report.pdf
 ---
 
 ### Head
