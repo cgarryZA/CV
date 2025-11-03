@@ -9,7 +9,7 @@ location: Durham, United Kingdom
 period: Aug 2025 – Present
 links.linkedin:
 links.github:
-cover: assets\cs2_market_cover.jpeg
+cover:
 cv: true
 tags: [Research, CS2, CSGO, Market Microstructure, Liquidity, Execution, Backtesting, Python, C++]
 ---
