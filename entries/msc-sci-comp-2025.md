@@ -7,7 +7,6 @@ section: Education
 institution: Durham University
 location: Durham, United Kingdom
 period: Sep 2025 – Present
-# Optional deep-links (shown as badges if present)
 links.linkedin:
 links.github:
 cover: assets\durham_university_logo.jpeg

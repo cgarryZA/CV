@@ -8,7 +8,6 @@ employer: Siemens PLC
 location: Hebburn, United Kingdom
 period: Sep 2024 – Present
 links.linkedin: https://www.linkedin.com/posts/christian-tt-garry_siemens-7sr5-rolebasedaccess-activity-7333857450820837376-Xtep?utm_source=share&utm_medium=member_desktop&rcm=ACoAAChd9q4B29avFDDTAuXVklWC8QUelrSQe0s
-
 cover: assets/siemens_logo.jpeg
 cv: true
 tags: [C/C++, Networking, TCP/IP, IEC 60870, DNP3, Protocols, Systems, Python, RAG, Qdrant, LLM]

@@ -13,10 +13,9 @@ links.education: ./meng-electronic-2024.md
 cover: assets\durham_university_logo.jpeg
 cv: true
 tags: [Research, Electronics, SiC, JFET, CPU, LTspice, Compilers]
-
 asset: assets/GARRY-CHRISTIAN-MEng-FYP.pdf
-
 ---
+
 ### Head
 
 ### Silicon Carbide JFET CPU — Master’s Dissertation  

@@ -17,9 +17,7 @@ crosslinks:
   - id: project-ev-electronic-differential-2022-2023
   - id: project-hydrogen-fuel-system-2021-2022
 
-transcript:
-  label: Open transcript
-  url: assets/Christian_Timothy_Thomas_Garry_Transcript.pdf
+asset: assets/Christian_Timothy_Thomas_Garry_Transcript.pdf
 ---
 
 ### Head
