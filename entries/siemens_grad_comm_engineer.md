@@ -18,6 +18,8 @@ tags: [C/C++, Networking, TCP/IP, IEC 60870, DNP3, Protocols, Systems, Python, R
 ### Graduate Communications Engineer — Siemens PLC  
 *Sep 2024 – Present | On‑site (Hebburn)*
 
+Specialist comms-stack dev for Siemens protection relays: latency-sensitive C/C++ over TCP/IP with IEC 60870 & DNP3, profiling for determinism and fault-tolerance. Built Python/Qdrant LLM-powered RAG that indexes manuals/code with traceable evaluation (recall@k, MRR, nDCG), cutting engineer time-to-answer by >90% and enabling reproducible protocol debugging.
+
 ### Body
 
 **Systems/Networking**  
