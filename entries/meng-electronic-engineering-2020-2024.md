@@ -14,8 +14,11 @@ cv: true
 tags: [MEng, Durham, Electronic Engineering, Communications, Embedded, Education]
 crosslinks:
   - id: dissertation-sic-jfet-cpu-2023-2024
+    label: Dissertation (SiC JFET CPU)
   - id: project-ev-electronic-differential-2022-2023
+    label: EV Differential
   - id: project-hydrogen-fuel-system-2021-2022
+    label: Hydrogen Fuel System
 asset: assets/Christian_Timothy_Thomas_Garry_Transcript.pdf
 ---
 
