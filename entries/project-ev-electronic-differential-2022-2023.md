@@ -11,24 +11,27 @@ links.linkedin:
 links.github:
 links.education: ./meng-electronic-2024.md
 cover: assets\durham_university_logo.jpeg
-tags: [Team Project, EV, Control, Power Electronics, VFD]
+cv: false
+tags: [Team Project, EV, Control Systems, Power Electronics, VFD]
 asset: assets/GLIKR1-Final_Design_Report.pdf
 ---
 
 ### Head
 
-### Electronic Differential System for EVs — Year 3 Project  
-*Team of 6; torque vectoring and cost‑reduced drivetrain architecture*
+### Electronic Differential for Electric Vehicles — Year 3 Design Project  
+*Team of 6; torque-vectoring architecture and system-level feasibility*
 
 ### Body
 
 **What I did**  
-- Designed **electronic differential** and **torque‑vectoring** concept to reduce mass and BOM vs. mechanical diffs.  
-- Produced a **variable‑frequency drive** concept for per‑wheel motor control aligned to control algorithms.  
-- Coordinated bi‑weekly technical meetings and progress reports.
+- Contributed to the **system architecture** of a torque-vectoring electronic differential intended to replace a mechanical differential in multi-motor EVs.  
+- Designed the **variable-frequency drive (VFD) control concept** translating ECU torque commands into per-wheel motor actuation.  
+- Developed **PWM generation and signal-conditioning concepts**, including practical **ECU pin-count reduction** through shared timing references and local signal generation.  
+- Selected and documented **VFD PCB components** with justification based on electrical ratings, cost, and integration constraints.  
+- Co-authored system **wiring and integration** sections covering low-voltage control, CAN communication, and high-voltage interlock considerations.
 
 **Outcome**  
-Delivered feasibility study, control approach, and system design artifacts to the departmental design review.
+Delivered a complete **concept-to-design feasibility study** covering control strategy, power-electronics architecture, mechanical and thermal considerations, manufacturability, and risk, reviewed at departmental level.
 
 ---
 
@@ -48,7 +51,6 @@ Delivered feasibility study, control approach, and system design artifacts to th
 \vspace{0.10 cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Built electronic differential and torque vectoring with custom variable-frequency drive to reduce cost/weight.
+        \item Designed torque-vectoring electronic differential architecture with custom VFD control concepts for multi-motor EVs.
     \end{highlights}
 \end{onecolentry}
-```

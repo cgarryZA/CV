@@ -16,7 +16,6 @@ crosslinks:
   - id: dissertation-sic-jfet-cpu-2023-2024
   - id: project-ev-electronic-differential-2022-2023
   - id: project-hydrogen-fuel-system-2021-2022
-
 asset: assets/Christian_Timothy_Thomas_Garry_Transcript.pdf
 ---
 
@@ -25,23 +24,25 @@ asset: assets/Christian_Timothy_Thomas_Garry_Transcript.pdf
 ### MEng Electronic Engineering — Durham University  
 *Awarded Jun 2024 (Upper Second-Class Honours; H711 Electronic Engineering pathway)*
 
-Four-year integrated Masters covering **electronics, communications and embedded systems**, with strong mathematical and control foundations. Progressed from general engineering (Y1–Y2) to **electronic/electrical specialism** (Y3–Y4), culminating in an **individual MEng R&D project**.
+Four-year integrated Master’s progressing from core engineering mathematics and modelling into electronics, communications, control, and embedded systems, culminating in an individual MEng research project with significant software and systems design content.
 
 ### Body
 
-**Selected modules (by year)**  
-- **Year 1–2 (General Engineering core):** Mathematics for Engineers & Scientists; Thermodynamics & Fluid Mechanics; Solid Mechanics & Structures; Electronic & Electrical Systems; Engineering Practice; Engineering Mathematics 2; Mathematical Modelling & Computing 2; Probability, Statistics & Further Mathematical Methods; Electronics 2; Electrical Engineering 2; Engineering Design 2.  
-- **Year 3 (Specialisation):** Digital Electronics & DSP; Electronics & Communications; Control & Signal Processing; Engineering Design 3; Electrical Engineering 3; Semiconductor Physics & Devices.  
-- **Year 4 (Advanced electronics/communications):** Advanced Electronics; Radio & Digital Communications; Photonics; Communications Networks; Artificial Intelligence & Deep Learning; Advanced Electronics Measurements; **MEng Research & Development Project**.
+**Curriculum structure**  
+- **Years 1–2 (Core engineering):** engineering mathematics, probability & statistics, mathematical modelling & computing, mechanics, thermodynamics, electronics, and electrical systems.  
+- **Year 3 (Specialisation):** digital electronics & DSP, electronics & communications, control & signal processing, semiconductor devices, systems-level design.  
+- **Year 4 (Advanced topics):** radio & digital communications, communications networks, advanced electronics, photonics, AI & deep learning, measurement & instrumentation, MEng research project.
 
-**Why it matters**  
-Built a toolkit that blends **rigorous maths**, **signal processing/communications**, and **hardware-aware software**—useful for both **HFT-style latency/throughput thinking** and robust production engineering.
+**Key technical themes**  
+- **Mathematics & modelling:** linear algebra, probability, statistics, numerical methods.  
+- **Signals & systems:** DSP, communications theory, control systems.  
+- **Hardware–software interface:** embedded systems, digital logic, device-level understanding.  
+- **Engineering computation:** C/C++, Python, simulation-driven design and analysis.
 
-**Highlights**  
-- **MEng R&D Project:** _Silicon Carbide JFET CPU_ — custom 4‑bit architecture in LTspice with a bespoke C‑like compiler (C++), assembler, and Python PWL toolchain.  
-- **Control/DSP:** classical & discrete-time techniques; real-time computing labs.  
-- **Electronics CAD & measurements:** analogue/digital design, instrumentation, FPGA/VHDL exposure (Digital Systems).
-
+**Selected highlights**  
+- **MEng Research Project:** *Silicon Carbide JFET CPU* — designed and simulated a custom 4-bit CPU architecture in LTspice, supported by a bespoke C++ compiler/assembler toolchain and Python-based waveform generation utilities.  
+- **Design & analysis projects:** multi-year engineering design projects involving control, electronics, and system integration.  
+- **Laboratory work:** real-time systems, measurement, and verification in electronics and communications context
 ---
 
 ### Short CV Snippet (LaTeX)

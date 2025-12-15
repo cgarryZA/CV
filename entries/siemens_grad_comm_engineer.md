@@ -16,20 +16,21 @@ tags: [C/C++, Networking, TCP/IP, IEC 60870, DNP3, Protocols, Systems, Python, R
 ### Head
 
 ### Graduate Communications Engineer — Siemens PLC  
-*Sep 2024 – Present | On‑site (Hebburn)*
+*Sep 2024 – Present | On-site (Hebburn)*
 
-Specialist comms-stack dev for Siemens protection relays: latency-sensitive C/C++ over TCP/IP with IEC 60870 & DNP3, profiling for determinism and fault-tolerance. Built Python/Qdrant LLM-powered RAG that indexes manuals/code with traceable evaluation (recall@k, MRR, nDCG), cutting engineer time-to-answer by >90% and enabling reproducible protocol debugging.
+Graduate communications engineer focused on **Python-based engineering tooling and low-level C/C++ communication systems**. Built a **Retrieval-Augmented Generation (RAG)** system from scratch to structure technical knowledge and accelerate engineering analysis, alongside custom networking components used in simulation and digital-twin workflows.
 
 ### Body
 
-**Systems/Networking**  
-- Built **latency‑sensitive C/C++ stacks** for industrial relays (TCP/IP, **IEC 60870**, **DNP3**); emphasis on **determinism**, **fault‑tolerance**, and profiling‑driven performance.  
-- Developed **simulation tooling** and **automated test harnesses** for protocol validation and compliance.
+**Engineering Tooling (RAG)**  
+- Designed and implemented a **Retrieval-Augmented Generation (RAG)** platform **from scratch in Python**, integrating local LLMs (**Ollama**) with a **vector database (Qdrant)** to structure technical documentation and codebases.  
+- Enabled context-aware querying over large protocol specifications and source trees, **reducing engineer time-to-solution by over 90%**.  
+- Built the system end-to-end, including data ingestion, chunking, embedding, retrieval logic, and query orchestration, with an emphasis on **transparent and reproducible behaviour** suitable for engineering use.
 
-**RAG/Knowledge systems**  
-- Designed a **Retrieval‑Augmented Generation** pipeline (Python, **Qdrant**, LLM) indexing manuals/code/metadata with end‑to‑end tracing and diagnostics; **reduced engineer time‑to‑answer by >90%**.  
-- Implemented retrieval evaluation using **standard IR metrics** (e.g., recall@k, MRR, nDCG) and labeled question sets; added **A/B switches** to compare retrievers and prompt strategies.  
-- Productionised data ingestion (chunking, dedup, versioning), added **observability** (per‑query traces), and guardrails for **deterministic replays**.
+**Systems / Networking**  
+- Implemented **custom C/C++ networking components** using TCP/IP and serial communication to support industrial communication and **digital-twin simulation environments**.  
+- Developed communication logic to stream and exchange data between simulated systems and PC-based tooling.  
+- Built supporting simulation utilities to validate communication behaviour during development.
 
 ---
 
@@ -42,16 +43,14 @@ Specialist comms-stack dev for Siemens protection relays: latency-sensitive C/C+
 \end{twocolentry}
 
 \begin{twocolentry}
-  {Sep 2024 – Present}
+  {Sep 2024 -- Present}
   \textbf{Siemens PLC}
 \end{twocolentry}
 
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Built latency-sensitive C/C++ stacks for industrial relays (TCP/IP, IEC 60870, DNP3).
-    \item Designed Retrieval-Augmented Generation (RAG) pipeline (Python, Qdrant, LLM) with retrieval evaluation and end-to-end tracing/diagnostics; cut engineer time-to-answer by over 99\%.
+    \item Designed a Retrieval-Augmented Generation system from scratch in Python using local LLMs (Ollama) and a vector database (Qdrant), reducing engineer time-to-solution by over 90\%.
+    \item Implemented custom C/C++ networking components to support industrial communication and digital-twin simulation workflows.
   \end{highlights}
 \end{onecolentry}
-
-```

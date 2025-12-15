@@ -17,9 +17,9 @@ tags: [MSc, Durham, Scientific Computing, AI, HPC, Education]
 ### Head
 
 ### MSc Scientific Computing & Data Analysis (AI for Engineering) — Durham University  
-*Started Sep 2025 (concurrent with role at Siemens, Durham, UK)*
+*Sep 2025 – Present | Concurrent with Siemens role*
 
-I started the MSc in September 2025. My focus is on **statistical inference, optimisation, numerical linear algebra, and high-performance/GPU computing**, with an eye to writing numerically stable, production-grade code. I’m doing the degree alongside my work at Siemens, so I’m being disciplined with time-management and shipping work that’s useful.
+This MSc focuses on **statistical inference, optimisation, numerical linear algebra, and high-performance/GPU computing**, with emphasis on numerically stable methods and performance-aware implementations. The programme formalises the mathematical and computational foundations underlying my engineering and research-oriented work.
 
 ### Body
 
@@ -28,16 +28,14 @@ I started the MSc in September 2025. My focus is on **statistical inference, opt
 - **Specialisation:** Optimisation & Control for AI; Deep Learning for Engineering.  
 - **Options (selection):** Advanced Statistical & ML (Foundations & Unsupervised); Advanced Statistics & ML (Regression & Classification); Performance Modelling, Vectorisation & GPU Programming.
 
-**Why this matters**  
-It formalises the tools I use at work and in personal research: probabilistic modelling, optimisation, and performance engineering—bridging **algorithmic rigour** with **deployable, efficient implementations**.
+**Technical focus**  
+The degree strengthens my grounding in probabilistic modelling, optimisation, and performance engineering, with consistent emphasis on:
+- **Out-of-sample evaluation** and uncertainty-aware analysis  
+- **Numerical stability** and algorithmic robustness  
+- **Efficient implementations**, including vectorisation and GPU acceleration  
+- **Reproducible workflows**, from experimentation through deployment
 
-**What I’m aiming for**  
-- **Uncertainty-aware** models and optimisation pipelines that hold up **out-of-sample** on real data streams.  
-- **Performance-minded code** (vectorisation, CUDA/GPU) with profiling, numerical stability, and reproducible runs.  
-- **Robust deployments:** tested, documented tooling that moves cleanly from research to production.  
-- Bread-and-butter foundations reinforced: **Bayesian inference**, **supervised/unsupervised learning**, **stochastic modelling**, and **time-series-aware evaluation**.
-
-> _This entry will be expanded with project artefacts (reports, repos, benchmarks) as modules progress._
+> _This entry will be expanded with project artefacts (reports, repositories, benchmarks) as modules progress._
 
 ---
 
@@ -47,11 +45,10 @@ It formalises the tools I use at work and in personal research: probabilistic mo
 \begin{twocolentry}
   {Durham, United Kingdom}
   \textbf{MSc Scientific Computing \& Data Analysis (AI for Engineering)}
-  \textit{}
 \end{twocolentry}
 
 \begin{twocolentry}
-  {Sep 2025 – Present}
+  {Sep 2025 -- Present}
   \textbf{Durham University}
 \end{twocolentry}
 
@@ -61,4 +58,3 @@ It formalises the tools I use at work and in personal research: probabilistic mo
     \item \textbf{Modules:} Bayesian ML (Foundations/Unsupervised; Regression/Classification), Optimisation \& Control for AI, Deep Learning for Engineering, HPC/GPU Programming, Performance \& Vectorisation.
   \end{highlights}
 \end{onecolentry}
-```

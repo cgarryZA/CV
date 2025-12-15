@@ -24,8 +24,8 @@ tags: [Leadership, Activities, Interests, Fencing, Quant, Durham]
 - **Scholar‑Athlete Leadership — Team Durham (2020–2024):** **Weldon le Huray Scholarship (Fencing)** recipient; balanced performance sport with academic workload and project delivery.
 
 **Activities & Sport**  
-- **Fencing (Team Durham):** Weekly BUCS fixtures and training; focus on discipline, preparation under time pressure, and match‑by‑match adjustment.  
-- **Boxing (Student Fight Night):** Structured fight camp; goal‑oriented training, risk‑managed progression.  
+- **Fencing (Team Durham):** Weekly BUCS fixtures and training; focus on discipline, preparation under time pressure, and match‑by‑match adjustment.
+- **Boxing (Student Fight Night):** Structured fight camp; goal‑oriented training.  
 - **Counter‑Strike (team strategy):** Calling, adaptation under uncertainty, and communication — translates to fast decision‑making and execution under latency/throughput constraints.
 
 **Interests**  
@@ -44,7 +44,7 @@ tags: [Leadership, Activities, Interests, Fencing, Quant, Durham]
 ```latex
 \begin{onecolentry}
 	\textbf{Leadership:} Bishops Diocesan College Fencing Team Captain; Durham Fresher Representative (2022–23). \\
-    \textbf{Activities:} Durham University Fencing Team; Counter-Strike (team strategy); Boxing (Student Fight~Night). \\
+    \textbf{Activities:} Durham University Fencing Team; competitive team-based strategy games; Boxing (Student Fight~Night). \\
     \textbf{Interests:} Market analysis projects (alternative digital assets); investing/trading strategy exploration; AI/software experiments; real estate and rental markets. \\
     \textbf{Achievements:} Weldon le Huray Fencing Scholarship (2020–24); South Africa U17 Fencing Champion; President’s Award (Gold).
 \end{onecolentry}
