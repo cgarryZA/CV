@@ -55,7 +55,8 @@ The degree strengthens my grounding in probabilistic modelling, optimisation, an
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item \textbf{Focus:} Probability and statistics, optimisation, numerical methods, Bayesian and regression models, HPC/GPU programming.
+    \item Current average: Distinction (89\%).
+    \item \textbf{Focus:} probability, statistics, optimisation, numerical methods, Bayesian and regression models, HPC/GPU.
   \end{highlights}
 \end{onecolentry}
 ```

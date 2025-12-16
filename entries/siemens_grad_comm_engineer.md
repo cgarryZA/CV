@@ -51,10 +51,8 @@ Graduate communications engineer focused on **Python-based engineering tooling a
 \begin{onecolentry}
     \begin{highlights}
         \item Implemented and adapted C/C++ communication components (TCP/IP, serial) to support data exchange between simulated systems and PC-based engineering tools.
-        \item Built Python-based engineering tooling to structure and query internal technical documentation and codebases using a retrieval-augmented workflow.
-        \item Integrated local LLMs (via Ollama) with a vector database (Qdrant) for context-aware document retrieval, focusing on traceability and reproducible behaviour rather than model optimisation.
-        \item Adapted existing network signal and waveform-generation utilities to interface with specific IP endpoints for development and testing workflows.
-        \item Supported validation and testing activities by exercising communication paths and identifying failure modes during integration.
+        \item Built Python-based engineering tooling to structure and query internal technical documentation and codebases using a retrieval-augmented workflow (local LLMs, vector search).
+        \item Adapted existing network signal and waveform-generation utilities to support development and integration testing workflows.
     \end{highlights}
 \end{onecolentry}
 ```

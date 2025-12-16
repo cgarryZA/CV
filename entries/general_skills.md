@@ -46,6 +46,6 @@ Clear documentation & reporting; independent project ownership; collaborative te
 
 ```latex
 \begin{onecolentry}
-    Probability \& Statistics; Numerical Methods; Optimisation; Monte Carlo Simulation; Scientific Computing; Python; C++; High-Performance Computing
+    Probability \& Statistics; Numerical Methods; Optimisation; Monte Carlo Simulation; Python; C++; High-Performance Computing; Linear Algebra
 \end{onecolentry}
 ```

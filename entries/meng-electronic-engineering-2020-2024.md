@@ -62,4 +62,11 @@ Four-year integrated Master’s progressing from core engineering mathematics an
   {Sep 2020 – Jun 2024}
   \textbf{Durham University}
 \end{twocolentry}
+
+\begin{onecolentry}
+  \begin{highlights}
+    \item Upper Second-Class Honours (2:1).
+    \item \textbf{Dissertation:} \textit{Silicon Carbide JFET CPU} — simulation-driven CPU design with instruction-level verification and architectural trade-off analysis.
+  \end{highlights}
+\end{onecolentry}
 ```
