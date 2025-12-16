@@ -9,6 +9,7 @@ location: Durham, United Kingdom
 period: Sep 2020 – Jun 2024
 links.linkedin:
 links.github:
+links.education: https://www.durham.ac.uk/study/courses/general-engineering-h100/
 cover: assets\durham_university_logo.jpeg
 cv: true
 tags: [MEng, Durham, Electronic Engineering, Communications, Embedded, Education]

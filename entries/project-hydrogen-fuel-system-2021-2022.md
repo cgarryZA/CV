@@ -9,7 +9,10 @@ location: Durham, United Kingdom
 period: Oct 2021 – Apr 2022
 links.linkedin:
 links.github:
-links.education: ./meng-electronic-2024.md
+links.education:
+crosslinks:
+  - id: meng-electronic-engineering-2020-2024
+    label: MEng Electronic Engineering
 cover: assets\durham_university_logo.jpeg
 cv: false
 tags: [Team Project, Hydrogen, Cryogenics, Systems Engineering, Sensors, Aerospace]

@@ -9,7 +9,10 @@ location: Durham, United Kingdom
 period: Oct 2022 – Apr 2023
 links.linkedin:
 links.github:
-links.education: ./meng-electronic-2024.md
+links.education:
+crosslinks:
+  - id: meng-electronic-engineering-2020-2024
+    label: MEng Electronic Engineering
 cover: assets\durham_university_logo.jpeg
 cv: false
 tags: [Team Project, EV, Control Systems, Power Electronics, VFD]

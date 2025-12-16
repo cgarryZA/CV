@@ -9,7 +9,10 @@ location: Durham, United Kingdom
 period: Oct 2023 – Apr 2024
 links.linkedin:
 links.github:
-links.education: ./meng-electronic-2024.md
+links.education:
+crosslinks:
+  - id: meng-electronic-engineering-2020-2024
+    label: MEng Electronic Engineering
 cover: assets\durham_university_logo.jpeg
 cv: true
 tags: [Research, Electronics, SiC, JFET, CPU, LTspice, Compilers, Verification]
