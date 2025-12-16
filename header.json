@@ -1,28 +1,22 @@
 {
   "name": "Christian Garry",
-
   "headline": "MSc Scientific Computing~\\textbar{}~Probability · Statistics · Optimisation~\\textbar{}~C++/Python",
-
   "contacts": [
     {
-      "type": "email",
-      "value": "christiangarry.southafrica@gmail.com",
-      "href": "mailto:christiangarry.southafrica@gmail.com"
+      "href": "mailto:christiangarry.southafrica@gmail.com",
+      "value": "christiangarry.southafrica@gmail.com"
     },
     {
-      "type": "phone",
-      "value": "+44 79 3232 6827",
-      "href": "tel:+447932326827"
+      "href": "tel:+447932326827",
+      "value": "+44 79 3232 6827"
     },
     {
-      "type": "website",
-      "value": "christiangarry.com",
-      "href": "https://christiangarry.com"
+      "href": "https://christiangarry.com",
+      "value": "christiangarry.com"
     },
     {
-      "type": "linkedin",
-      "value": "linkedin.com/in/christian-tt-garry",
-      "href": "https://www.linkedin.com/in/christian-tt-garry/"
+      "href": "https://www.linkedin.com/in/christian-tt-garry/",
+      "value": "linkedin.com/in/christian-tt-garry"
     }
   ]
 }

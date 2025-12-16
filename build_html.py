@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 import re
+import json
 from datetime import datetime
 from pathlib import Path
 
@@ -9,6 +10,7 @@ from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
 ENTRIES_DIR = ROOT / "entries"
+HEADER_JSON = ROOT / "header.json"
 OUTPUT_HTML = ROOT / "cv.html"
 
 # ============================================================
@@ -90,14 +92,10 @@ def parse_date(meta: dict):
 def latex_to_html(lx: str) -> str:
     html = lx
 
-    # -------------------------
-    # Strip comments (FIXED)
-    # -------------------------
+    # Strip comments
     html = re.sub(r"(?<!\\)%.*", "", html)
 
-    # -------------------------
-    # Normalize LaTeX escapes
-    # -------------------------
+    # Normalise LaTeX escapes
     html = html.replace("\\%", "%")
     html = html.replace("\\&", "&")
     html = html.replace("\\@", "")
@@ -106,9 +104,7 @@ def latex_to_html(lx: str) -> str:
     html = html.replace("--", "–")
     html = html.replace("~", " ")
 
-    # -------------------------
-    # twocolentry → semantic entry
-    # -------------------------
+    # twocolentry
     html = re.sub(
         r"\\begin{twocolentry}\s*\{(.*?)\}\s*(.*?)\\end{twocolentry}",
         r"""
@@ -123,46 +119,60 @@ def latex_to_html(lx: str) -> str:
         flags=re.S
     )
 
-    # -------------------------
     # onecolentry
-    # -------------------------
     html = re.sub(r"\\begin{onecolentry}", '<div class="onecol">', html)
     html = re.sub(r"\\end{onecolentry}", "</div>", html)
 
-    # -------------------------
-    # highlights → ul/li
-    # -------------------------
+    # highlights
     html = re.sub(r"\\begin{highlights}", "<ul>", html)
     html = re.sub(r"\\end{highlights}", "</ul>", html)
     html = re.sub(r"\\item\s*", "<li>", html)
     html = re.sub(r"(<li>.*?)(?=<li>|</ul>)", r"\1</li>", html, flags=re.S)
 
-    # -------------------------
-    # Text formatting
-    # -------------------------
+    # text formatting
     html = re.sub(r"\\textbf\{(.*?)\}", r"<strong>\1</strong>", html)
     html = re.sub(r"\\textit\{(.*?)\}", r"<em>\1</em>", html)
 
-    # -------------------------
-    # Vertical spacing
-    # -------------------------
+    # spacing
     html = re.sub(r"\\vspace\{.*?\}", '<div class="spacer"></div>', html)
 
-    # -------------------------
-    # Line breaks
-    # -------------------------
+    # line breaks
     html = html.replace("\\\\", "<br>")
-
-    # Cleanup
     html = re.sub(r"\n\s*\n+", "\n", html)
 
     return html.strip()
+
+# ============================================================
+# INLINE LaTeX NORMALISATION (FOR HEADER.JSON)
+# ============================================================
+
+def latex_inline_to_html(s: str) -> str:
+    """Minimal LaTeX cleanup for inline header fields."""
+    if not s:
+        return ""
+    s = re.sub(r"(?<!\\)%.*", "", s)
+    s = s.replace("\\%", "%")
+    s = s.replace("\\&", "&")
+    s = s.replace("\\@", "")
+    s = s.replace("\\textbar{}", "|")
+    s = s.replace("~", " ")
+    return s.strip()
 
 # ============================================================
 # Build
 # ============================================================
 
 def main():
+    header = json.loads(HEADER_JSON.read_text(encoding="utf-8"))
+
+    name = latex_inline_to_html(header["name"])
+    headline = latex_inline_to_html(header["headline"])
+
+    contacts_html = " | ".join(
+        latex_inline_to_html(c["value"])
+        for c in header["contacts"]
+    )
+
     sections = {k: [] for k, _ in SECTION_ORDER}
 
     for md in sorted(ENTRIES_DIR.glob("*.md")):
@@ -191,98 +201,64 @@ def main():
             "html": latex_to_html(latex)
         })
 
-    # Sort newest first
     for key in sections:
         sections[key].sort(key=lambda x: x["date"], reverse=True)
 
-    # ========================================================
-    # HTML output
-    # ========================================================
-
-    out = ["""<!DOCTYPE html>
+    out = [f"""<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>Christian Garry — CV</title>
+<title>{name} — CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-
 <style>
-body {
+body {{
   max-width: 900px;
   margin: 48px auto;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: #111;
-}
-
-/* HEADER (PDF-like) */
-.header {
+}}
+.header {{
   text-align: center;
   margin-bottom: 24px;
-}
-.header h1 {
+}}
+.header h1 {{
   font-size: 32px;
   margin-bottom: 6px;
-}
+}}
 .header .tagline,
-.header .contacts {
+.header .contacts {{
   font-size: 14px;
   margin-bottom: 4px;
-}
-
-/* Sections */
-h2 {
+}}
+h2 {{
   border-bottom: 1px solid #000;
   padding-bottom: 4px;
   margin-top: 28px;
   margin-bottom: 10px;
   font-size: 20px;
-}
-
-/* Entry layout */
-.entry {
-  margin-bottom: 4px;
-}
-.entry-header {
+}}
+.entry {{ margin-bottom: 4px; }}
+.entry-header {{
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 16px;
-  align-items: baseline;
-}
-.entry-right {
+}}
+.entry-right {{
   text-align: right;
   white-space: nowrap;
-  font-size: 0.95em;
-}
-
-/* Content blocks */
-.onecol {
-  margin-bottom: 6px;
-}
-ul {
-  margin: 4px 0 0 18px;
-  padding: 0;
-}
-li {
-  margin-bottom: 2px;
-}
-.spacer {
-  height: 8px;
-}
+}}
+.onecol {{ margin-bottom: 6px; }}
+ul {{ margin: 4px 0 0 18px; padding: 0; }}
+li {{ margin-bottom: 2px; }}
+.spacer {{ height: 8px; }}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>Christian Garry</h1>
-  <div class="tagline">
-    MSc Scientific Computing | Probability · Statistics · Optimisation | C++/Python
-  </div>
-  <div class="contacts">
-    christiangarry.southafrica@gmail.com |
-    +44 79 3232 6827 |
-    christiangarry.com |
-    linkedin.com/in/christian-tt-garry
-  </div>
+  <h1>{name}</h1>
+  <div class="tagline">{headline}</div>
+  <div class="contacts">{contacts_html}</div>
 </div>
 """]
 
