@@ -47,7 +47,6 @@ I lead weekly project tutorials for undergraduate design teams and act as an ind
 \begin{onecolentry}
   \begin{highlights}
     \item Lead weekly design tutorials; mentor teams on scope, feasibility, Gantt planning, and design reviews.
-    \item Mark feasibility and final submissions; deliver quantitative, structured feedback on clarity, rigour, and justification.
     \item Coach teams through feasibility-driven decision-making: surface assumptions and specifications, test them, and retire designs that fail cost, risk, or performance constraints.
   \end{highlights}
 \end{onecolentry}
