@@ -49,8 +49,12 @@ Graduate communications engineer focused on **Python-based engineering tooling a
 
 \vspace{0.10 cm}
 \begin{onecolentry}
-  \begin{highlights}
-    \item Designed a Retrieval-Augmented Generation system from scratch in Python using local LLMs (Ollama) and a vector database (Qdrant), reducing engineer time-to-solution by over 90\%.
-    \item Implemented custom C/C++ networking components to support industrial communication and digital-twin simulation workflows.
-  \end{highlights}
+    \begin{highlights}
+        \item Implemented and adapted C/C++ communication components (TCP/IP, serial) to support data exchange between simulated systems and PC-based engineering tools.
+        \item Built Python-based engineering tooling to structure and query internal technical documentation and codebases using a retrieval-augmented workflow.
+        \item Integrated local LLMs (via Ollama) with a vector database (Qdrant) for context-aware document retrieval, focusing on traceability and reproducible behaviour rather than model optimisation.
+        \item Adapted existing network signal and waveform-generation utilities to interface with specific IP endpoints for development and testing workflows.
+        \item Supported validation and testing activities by exercising communication paths and identifying failure modes during integration.
+    \end{highlights}
 \end{onecolentry}
+```

@@ -58,3 +58,4 @@ The degree strengthens my grounding in probabilistic modelling, optimisation, an
     \item \textbf{Modules:} Bayesian ML (Foundations/Unsupervised; Regression/Classification), Optimisation \& Control for AI, Deep Learning for Engineering, HPC/GPU Programming, Performance \& Vectorisation.
   \end{highlights}
 \end{onecolentry}
+```

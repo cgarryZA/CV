@@ -57,3 +57,4 @@ Delivered a complete **concept-to-design feasibility study** covering control st
         \item Designed torque-vectoring electronic differential architecture with custom VFD control concepts for multi-motor EVs.
     \end{highlights}
 \end{onecolentry}
+```

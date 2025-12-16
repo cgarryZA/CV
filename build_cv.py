@@ -11,9 +11,9 @@ OUTPUT_TEX  = ROOT / "cv.tex"           # final stitched LaTeX at repo root
 # --- Sections & order ---
 SECTION_ORDER = [
     ("education",  "Education"),
-    ("skills",     "Key Skills"),
     ("experience", "Experience"),
     ("research",   "Projects \\& Research"),
+    ("skills",     "Key Skills"),
     ("leadership", "Leadership, Activities \\& Interests"),
 ]
 
@@ -273,7 +273,7 @@ PREAMBLE_LATEX = r"""
     % --- Row 1: tagline (single line) ---
     \noindent\makebox[\textwidth][c]{%
         \small
-        MSc Scientific Computing ~\textbar{}~ Probability · Statistics · Optimisation ~\textbar{}~ C++/Python ~\textbar{}~ Quantitative Methods
+        MSc Scientific Computing ~\textbar{}~ Probability · Statistics · Optimisation ~\textbar{}~ C++/Python
     }\\[2pt]
 
     % --- Row 2: contacts (single line) ---

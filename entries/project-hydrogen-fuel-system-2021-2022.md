@@ -64,3 +64,4 @@ Delivered a coherent **end-to-end LH₂ fuel system concept** with checkable siz
         \item Designed cryogenic LH$_2$ fuel system concepts with pressure control, sensing, and leak detection for regional aircraft.
     \end{highlights}
 \end{onecolentry}
+```

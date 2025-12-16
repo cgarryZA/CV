@@ -43,9 +43,8 @@ tags: [Leadership, Activities, Interests, Fencing, Quant, Durham]
 
 ```latex
 \begin{onecolentry}
-	\textbf{Leadership:} Bishops Diocesan College Fencing Team Captain; Durham Fresher Representative (2022–23). \\
-    \textbf{Activities:} Durham University Fencing Team; competitive team-based strategy games; Boxing (Student Fight~Night). \\
-    \textbf{Interests:} Market analysis projects (alternative digital assets); investing/trading strategy exploration; AI/software experiments; real estate and rental markets. \\
-    \textbf{Achievements:} Weldon le Huray Fencing Scholarship (2020–24); South Africa U17 Fencing Champion; President’s Award (Gold).
+    \textbf{Leadership:} Bishops Diocesan College Fencing Team Captain; Durham Fresher Representative (2022--23). \\
+    \textbf{Activities:} Durham University Fencing Team; Boxing (Student Fight Night). \\
+    \textbf{Achievements:} Weldon le Huray Fencing Scholarship (2020--24); South Africa U17 Fencing Champion; President’s Award (Gold).
 \end{onecolentry}
 ```

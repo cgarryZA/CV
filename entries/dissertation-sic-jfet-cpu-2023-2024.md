@@ -68,7 +68,9 @@ Awarded **84%**, among the highest marks in the cohort.
 \vspace{0.10 cm}
 \begin{onecolentry}
     \begin{highlights}
-        \item Designed and simulated a 4-bit SiC JFET CPU in LTspice for extreme-environment computing.
-        \item Built a complete toolchain (C++ compiler, assembler, Python automation) and verified instruction-level parity via emulator and waveform analysis.
+        \item Independently designed and simulated a 4-bit CPU using SiC JFET logic in LTspice, targeting computation in extreme temperature and radiation environments.
+        \item Constructed a full verification toolchain (C++ compiler, assembler, Python automation) and validated instruction-level behaviour via emulator parity checks and waveform-based state reconstruction.
+        \item Investigated architectural trade-offs, race conditions, and storage constraints, explicitly documenting assumptions, limitations, and scalability bottlenecks.
     \end{highlights}
 \end{onecolentry}
+```
