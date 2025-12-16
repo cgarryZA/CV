@@ -48,7 +48,7 @@ The degree strengthens my grounding in probabilistic modelling, optimisation, an
 \end{twocolentry}
 
 \begin{twocolentry}
-  {Sep 2025 -- Present}
+  {Sep 2025~--~Present}
   \textbf{Durham University}
 \end{twocolentry}
 
@@ -56,7 +56,7 @@ The degree strengthens my grounding in probabilistic modelling, optimisation, an
 \begin{onecolentry}
   \begin{highlights}
     \item Current average: Distinction (89\%).
-    \item \textbf{Focus:} probability, statistics, optimisation, numerical methods, Bayesian and regression models, HPC/GPU.
+    \item \textbf{Focus:} probability, statistics, optimisation, numerical methods, Bayesian and regression models, HPC/GPU.\@
   \end{highlights}
 \end{onecolentry}
 ```

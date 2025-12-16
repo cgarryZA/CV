@@ -47,7 +47,7 @@ Delivered a complete **concept-to-design feasibility study** covering control st
 \end{twocolentry}
 
 \begin{twocolentry}
-    {Oct 2022 – Apr 2023}
+    {Oct 2022~--~Apr 2023}
     \textbf{Durham University}
 \end{twocolentry}
 

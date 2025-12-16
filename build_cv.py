@@ -165,7 +165,7 @@ PREAMBLE_LATEX = r"""
 \usepackage{needspace}
 \usepackage{iftex}
 
-\ifPDFTeX
+\ifPDFTeX{}
     \input{glyphtounicode}
     \pdfgentounicode=1
     \usepackage[T1]{fontenc}
@@ -179,7 +179,7 @@ PREAMBLE_LATEX = r"""
   \noindent\textbf{#1} — #2 \hfill \textit{#3}\par
 }
 
-\raggedright
+\raggedright{}
 \AtBeginEnvironment{adjustwidth}{\partopsep0pt}
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
@@ -220,49 +220,47 @@ PREAMBLE_LATEX = r"""
     \end{adjustwidth}
 }
 \newenvironment{twocolentry}[2][]{
-    \onecolentry
+    \onecolentry{}
     \def\secondColumn{#2}
     \setcolumnwidth{\fill, 4.5 cm}
     \begin{paracol}{2}
 }{
-    \switchcolumn \raggedleft \secondColumn
+    \switchcolumn{} \raggedleft{} \secondColumn{}
     \end{paracol}
-    \endonecolentry
+    \endonecolentry{}
 }
 \newenvironment{threecolentry}[3][]{
-    \onecolentry
+    \onecolentry{}
     \def\thirdColumn{#3}
     \setcolumnwidth{, \fill, 4.5 cm}
     \begin{paracol}{3}
-    {\raggedright #2} \switchcolumn
+    {\raggedright{} #2} \switchcolumn{}
 }{
-    \switchcolumn \raggedleft \thirdColumn
+    \switchcolumn{} \raggedleft{} \thirdColumn{}
     \end{paracol}
-    \endonecolentry
+    \endonecolentry{}
 }
 \newenvironment{header}{
     \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
 }{
-    \par\kern\topsep
+    \par\kern\topsep{}
 }
 \newcommand{\placelastupdatedtext}{%
   \AddToShipoutPictureFG*{%
-    \put(
-        \LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},
-        \LenToUnit{\paperheight-1.0 cm}
-    ){\vtop{{\null}\makebox[0pt][c]{
+    \put(\LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},\LenToUnit{\paperheight-1.0 cm})
+    {\vtop{{\null}\makebox[0pt][c]{
         \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
     }}}%
   }%
 }
-\let\hrefWithoutArrow\href
+\let\hrefWithoutArrow\href{}
 
 \begin{document}
-    \newcommand{\AND}{\unskip
-        \cleaders\copy\ANDbox\hskip\wd\ANDbox
-        \ignorespaces
+    \newcommand{\AND}{\unskip{}
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox{}
+        \ignorespaces{}
     }
-    \newsavebox\ANDbox
+    \newsavebox\ANDbox{}
     \sbox\ANDbox{$|$}
 
     \begin{header}
@@ -273,19 +271,13 @@ PREAMBLE_LATEX = r"""
     % --- Row 1: tagline (single line) ---
     \noindent\makebox[\textwidth][c]{%
         \small
-        MSc Scientific Computing ~\textbar{}~ Probability · Statistics · Optimisation ~\textbar{}~ C++/Python
+        MSc Scientific Computing~\textbar{}~Probability · Statistics · Optimisation~\textbar{}~C++/Python
     }\\[2pt]
 
     % --- Row 2: contacts (single line) ---
     \noindent\makebox[\textwidth][c]{%
         \small
-        \mbox{\hrefWithoutArrow{mailto:christiangarry.southafrica@gmail.com}{christiangarry.southafrica@gmail.com}}
-        ~\textbar{}~
-        \mbox{\hrefWithoutArrow{tel:+447932326827}{+44 79 3232 6827}}
-        ~\textbar{}~
-        \mbox{\hrefWithoutArrow{https://christiangarry.com}{christiangarry.com}}
-        ~\textbar{}~
-        \mbox{\hrefWithoutArrow{https://www.linkedin.com/in/christian-tt-garry/}{linkedin.com/in/christian-tt-garry}}
+        \mbox{\hrefWithoutArrow{mailto:christiangarry.southafrica@gmail.com}{christiangarry.southafrica@gmail.com}}~\textbar{}~\mbox{\hrefWithoutArrow{tel:+447932326827}{+44 79 3232 6827}}~\textbar{}~\mbox{\hrefWithoutArrow{https://christiangarry.com}{christiangarry.com}}~\textbar{}~\mbox{\hrefWithoutArrow{https://www.linkedin.com/in/christian-tt-garry/}{linkedin.com/in/christian-tt-garry}}
     }
     \end{header}
 

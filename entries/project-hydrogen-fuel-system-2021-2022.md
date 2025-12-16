@@ -54,7 +54,7 @@ Delivered a coherent **end-to-end LH₂ fuel system concept** with checkable siz
 \end{twocolentry}
 
 \begin{twocolentry}
-    {Oct 2021 -- Apr 2022}
+    {Oct 2021~--~Apr 2022}
     \textbf{Durham University}
 \end{twocolentry}
 

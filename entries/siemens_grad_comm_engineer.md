@@ -43,7 +43,7 @@ Graduate communications engineer focused on **Python-based engineering tooling a
 \end{twocolentry}
 
 \begin{twocolentry}
-  {Sep 2024 -- Present}
+  {Sep 2024~--~Present}
   \textbf{Siemens PLC}
 \end{twocolentry}
 

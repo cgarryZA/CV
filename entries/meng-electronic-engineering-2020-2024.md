@@ -59,7 +59,7 @@ Four-year integrated Master’s progressing from core engineering mathematics an
 \end{twocolentry}
 
 \begin{twocolentry}
-  {Sep 2020 – Jun 2024}
+  {Sep 2020~--~Jun 2024}
   \textbf{Durham University}
 \end{twocolentry}
 

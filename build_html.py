@@ -12,19 +12,19 @@ ENTRIES_DIR = ROOT / "entries"
 OUTPUT_HTML = ROOT / "cv.html"
 
 # ============================================================
-# Sections & order (must match build_cv.py)
+# Section order — MUST MATCH build_cv.py
 # ============================================================
 
 SECTION_ORDER = [
     ("education",  "Education"),
-    ("skills",     "Key Skills"),
     ("experience", "Experience"),
     ("research",   "Projects & Research"),
+    ("skills",     "Key Skills"),
     ("leadership", "Leadership, Activities & Interests"),
 ]
 
 # ============================================================
-# Regex (CRLF-safe)
+# Regex
 # ============================================================
 
 FRONT_MATTER_RE = re.compile(
@@ -38,7 +38,7 @@ LATEX_BLOCK_RE = re.compile(
 )
 
 # ============================================================
-# Helpers (mirrors build_cv.py)
+# Front matter helpers
 # ============================================================
 
 def parse_front_matter(text: str):
@@ -84,41 +84,77 @@ def parse_date(meta: dict):
     return datetime(1900, 1, 1)
 
 # ============================================================
-# LaTeX → HTML (CV-specific, minimal & deterministic)
+# LaTeX → HTML (STRICT CV DIALECT)
 # ============================================================
 
 def latex_to_html(lx: str) -> str:
     html = lx
 
-    # Strip comments
-    html = re.sub(r"%.*", "", html)
+    # -------------------------
+    # Strip comments (FIXED)
+    # -------------------------
+    html = re.sub(r"(?<!\\)%.*", "", html)
 
-    # twocolentry blocks (two-line form)
+    # -------------------------
+    # Normalize LaTeX escapes
+    # -------------------------
+    html = html.replace("\\%", "%")
+    html = html.replace("\\&", "&")
+    html = html.replace("\\@", "")
+    html = html.replace("\\textbar{}", "|")
+    html = html.replace("~--~", " – ")
+    html = html.replace("--", "–")
+    html = html.replace("~", " ")
+
+    # -------------------------
+    # twocolentry → semantic entry
+    # -------------------------
     html = re.sub(
         r"\\begin{twocolentry}\s*\{(.*?)\}\s*(.*?)\\end{twocolentry}",
-        r'<div class="twocol"><div class="left">\2</div><div class="right">\1</div></div>',
+        r"""
+<div class="entry">
+  <div class="entry-header">
+    <div class="entry-left">\2</div>
+    <div class="entry-right">\1</div>
+  </div>
+</div>
+""",
         html,
         flags=re.S
     )
 
+    # -------------------------
     # onecolentry
+    # -------------------------
     html = re.sub(r"\\begin{onecolentry}", '<div class="onecol">', html)
     html = re.sub(r"\\end{onecolentry}", "</div>", html)
 
-    # highlights list
+    # -------------------------
+    # highlights → ul/li
+    # -------------------------
     html = re.sub(r"\\begin{highlights}", "<ul>", html)
     html = re.sub(r"\\end{highlights}", "</ul>", html)
-    html = re.sub(r"\\item", "<li>", html)
+    html = re.sub(r"\\item\s*", "<li>", html)
+    html = re.sub(r"(<li>.*?)(?=<li>|</ul>)", r"\1</li>", html, flags=re.S)
 
-    # formatting
+    # -------------------------
+    # Text formatting
+    # -------------------------
     html = re.sub(r"\\textbf\{(.*?)\}", r"<strong>\1</strong>", html)
     html = re.sub(r"\\textit\{(.*?)\}", r"<em>\1</em>", html)
 
-    # spacing
+    # -------------------------
+    # Vertical spacing
+    # -------------------------
     html = re.sub(r"\\vspace\{.*?\}", '<div class="spacer"></div>', html)
 
-    # line breaks
+    # -------------------------
+    # Line breaks
+    # -------------------------
     html = html.replace("\\\\", "<br>")
+
+    # Cleanup
+    html = re.sub(r"\n\s*\n+", "\n", html)
 
     return html.strip()
 
@@ -155,7 +191,7 @@ def main():
             "html": latex_to_html(latex)
         })
 
-    # Sort newest first (matches PDF)
+    # Sort newest first
     for key in sections:
         sections[key].sort(key=lambda x: x["date"], reverse=True)
 
@@ -174,44 +210,80 @@ def main():
 body {
   max-width: 900px;
   margin: 48px auto;
-  font-family: Inter, system-ui, sans-serif;
+  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
   color: #111;
 }
-h1 {
-  font-size: 32px;
-  margin-bottom: 8px;
+
+/* HEADER (PDF-like) */
+.header {
+  text-align: center;
+  margin-bottom: 24px;
 }
+.header h1 {
+  font-size: 32px;
+  margin-bottom: 6px;
+}
+.header .tagline,
+.header .contacts {
+  font-size: 14px;
+  margin-bottom: 4px;
+}
+
+/* Sections */
 h2 {
   border-bottom: 1px solid #000;
   padding-bottom: 4px;
-  margin-top: 36px;
+  margin-top: 28px;
+  margin-bottom: 10px;
   font-size: 20px;
 }
-.twocol {
-  display: grid;
-  grid-template-columns: 1fr 220px;
-  gap: 16px;
+
+/* Entry layout */
+.entry {
+  margin-bottom: 4px;
 }
-.right {
+.entry-header {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  align-items: baseline;
+}
+.entry-right {
   text-align: right;
   white-space: nowrap;
+  font-size: 0.95em;
 }
+
+/* Content blocks */
 .onecol {
   margin-bottom: 6px;
 }
 ul {
-  margin: 6px 0 0 18px;
+  margin: 4px 0 0 18px;
+  padding: 0;
 }
 li {
   margin-bottom: 2px;
 }
 .spacer {
-  height: 10px;
+  height: 8px;
 }
 </style>
 </head>
 <body>
-<h1>Christian Garry</h1>
+
+<div class="header">
+  <h1>Christian Garry</h1>
+  <div class="tagline">
+    MSc Scientific Computing | Probability · Statistics · Optimisation | C++/Python
+  </div>
+  <div class="contacts">
+    christiangarry.southafrica@gmail.com |
+    +44 79 3232 6827 |
+    christiangarry.com |
+    linkedin.com/in/christian-tt-garry
+  </div>
+</div>
 """]
 
     for key, title in SECTION_ORDER:
@@ -223,8 +295,8 @@ li {
             out.append(it["html"])
 
     out.append("</body></html>")
-    OUTPUT_HTML.write_text("\n".join(out), encoding="utf-8")
 
+    OUTPUT_HTML.write_text("\n".join(out), encoding="utf-8")
     print(f"[OK] Wrote {OUTPUT_HTML}")
 
 # ============================================================

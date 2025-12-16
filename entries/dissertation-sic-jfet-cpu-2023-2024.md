@@ -61,7 +61,7 @@ Awarded **84%**, among the highest marks in the cohort.
 \end{twocolentry}
 
 \begin{twocolentry}
-    {Oct 2023 -- Apr 2024}
+    {Oct 2023~--~Apr 2024}
     \textbf{Master's Dissertation}
 \end{twocolentry}
 

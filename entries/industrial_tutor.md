@@ -39,7 +39,7 @@ I lead weekly project tutorials for undergraduate design teams and act as an ind
 \end{twocolentry}
 
 \begin{twocolentry}
-  {Sep 2025 – Present}
+  {Sep 2025~--~Present}
   \textbf{Durham University, Department of Engineering}
 \end{twocolentry}
 
