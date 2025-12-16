@@ -9,7 +9,7 @@ location: Durham, United Kingdom
 period: Oct 2023 – Apr 2024
 links.linkedin:
 links.github:
-links.education: ./meng-electronic-2024.md
+links.education:
 crosslinks:
   - id: meng-electronic-engineering-2020-2024
     label: MEng Electronic Engineering
