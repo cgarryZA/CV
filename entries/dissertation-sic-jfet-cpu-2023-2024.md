@@ -1,4 +1,5 @@
 ---
+cv: true
 id: dissertation-sic-jfet-cpu-2023-2024
 title: Silicon Carbide JFET CPU (Master’s Dissertation)
 date: 2023-10-01
@@ -7,16 +8,12 @@ section: Research
 institution: Durham University
 location: Durham, United Kingdom
 period: Oct 2023 – Apr 2024
-links.linkedin:
-links.github:
-links.education:
+cover: assets\durham_university_logo.jpeg
+asset: assets/GARRY-CHRISTIAN-MEng-FYP.pdf
 crosslinks:
   - id: meng-electronic-engineering-2020-2024
     label: MEng Electronic Engineering
-cover: assets\durham_university_logo.jpeg
-cv: true
 tags: [Research, Electronics, SiC, JFET, CPU, LTspice, Compilers, Verification]
-asset: assets/GARRY-CHRISTIAN-MEng-FYP.pdf
 ---
 
 ### Head

@@ -1,4 +1,5 @@
 ---
+cv: true
 id: industrial-tutor-2025
 title: Industrial Tutor – Engineering Management & Manufacturing
 date: 2025-10-01
@@ -9,7 +10,6 @@ location: Durham, United Kingdom
 period: Sep 2025 – Present
 links.linkedin:
 cover: assets/durham_university_logo.jpeg
-cv: true
 tags: [Teaching, Engineering Design, Feasibility, Project Management, Quantitative Reasoning]
 ---
 

@@ -1,4 +1,5 @@
 ---
+cv: true
 id: msc-sci-comp-2025
 title: MSc Scientific Computing & Data Analysis (AI for Engineering)
 date: 2025-09-01
@@ -9,8 +10,8 @@ location: Durham, United Kingdom
 period: Sep 2025 – Present
 links.linkedin:
 links.github:
+links.education: https://www.durham.ac.uk/study/courses/scientific-computing-and-data-analysis-artificial-intelligence-for-engineering-g5t809/
 cover: assets\durham_university_logo.jpeg
-cv: true
 tags: [MSc, Durham, Scientific Computing, AI, HPC, Education]
 ---
 

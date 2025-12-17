@@ -1,4 +1,5 @@
 ---
+cv: false
 id: project-ev-electronic-differential-2022-2023
 title: Electronic Differential System for Electric Vehicles (Y3 Project)
 date: 2022-10-01
@@ -14,9 +15,8 @@ crosslinks:
   - id: meng-electronic-engineering-2020-2024
     label: MEng Electronic Engineering
 cover: assets\durham_university_logo.jpeg
-cv: false
-tags: [Team Project, EV, Control Systems, Power Electronics, VFD]
 asset: assets/GLIKR1-Final_Design_Report.pdf
+tags: [Team Project, EV, Control Systems, Power Electronics, VFD]
 ---
 
 ### Head

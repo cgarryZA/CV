@@ -1,4 +1,5 @@
 ---
+cv: true
 id: meng-electronic-engineering-2020-2024
 title: MEng Electronic Engineering
 date: 2020-09-01
@@ -7,12 +8,8 @@ section: Education
 institution: Durham University
 location: Durham, United Kingdom
 period: Sep 2020 – Jun 2024
-links.linkedin:
-links.github:
 links.education: https://www.durham.ac.uk/study/courses/general-engineering-h100/
 cover: assets\durham_university_logo.jpeg
-cv: true
-tags: [MEng, Durham, Electronic Engineering, Communications, Embedded, Education]
 crosslinks:
   - id: dissertation-sic-jfet-cpu-2023-2024
     label: Dissertation (SiC JFET CPU)
@@ -21,6 +18,7 @@ crosslinks:
   - id: project-hydrogen-fuel-system-2021-2022
     label: Hydrogen Fuel System
 asset: assets/Christian_Timothy_Thomas_Garry_Transcript.pdf
+tags: [MEng, Durham, Electronic Engineering, Communications, Embedded, Education]
 ---
 
 ### Head

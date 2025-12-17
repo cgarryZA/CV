@@ -136,19 +136,19 @@ def main():
     # ===============================
     # CLEANUP (ONLY AFTER PDF EXISTS)
     # ===============================
-    if OUTPUT_PDF.exists():
-        for ext in (
-            ".aux",
-            ".log",
-            ".fls",
-            ".fdb_latexmk",
-            ".synctex.gz",
-            ".tex",
-        ):
-            p = ROOT / f"cv{ext}"
-            if p.exists():
-                p.unlink()
-                print(f"[CLEAN] Deleted {p.name}")
-
+    #if OUTPUT_PDF.exists():
+    #    for ext in (
+    #        ".aux",
+    #        ".log",
+    #        ".fls",
+    #        ".fdb_latexmk",
+    #        ".synctex.gz",
+    #        ".tex",
+    #    ):
+    #        p = ROOT / f"cv{ext}"
+    #        if p.exists():
+    #            p.unlink()
+    #            print(f"[CLEAN] Deleted {p.name}")
+    
 if __name__ == "__main__":
     main()

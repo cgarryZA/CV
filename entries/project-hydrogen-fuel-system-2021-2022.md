@@ -1,4 +1,5 @@
 ---
+cv: false
 id: project-hydrogen-fuel-system-2021-2022
 title: Hydrogen Fuel System for Gas Turbines (Y2 Project)
 date: 2021-10-01
@@ -14,9 +15,8 @@ crosslinks:
   - id: meng-electronic-engineering-2020-2024
     label: MEng Electronic Engineering
 cover: assets\durham_university_logo.jpeg
-cv: false
-tags: [Team Project, Hydrogen, Cryogenics, Systems Engineering, Sensors, Aerospace]
 asset: assets/AHTB2_Final_Design_Report.pdf
+tags: [Team Project, Hydrogen, Cryogenics, Systems Engineering, Sensors, Aerospace]
 ---
 
 ### Head

@@ -1,44 +1,47 @@
 ---
+cv: true
 id: general-skills-2025
 title: General Skills
 date: 2025-11-03
 type: skills
 section: Skills
-links.linkedin:
-links.github:
 tags: [Skills, Quant, Engineering, HPC, ML, C++, Python]
-cv: true
 ---
 
 ### General Skills
 
-**Maths & Optimisation**  
-Probability & statistics; numerical methods; convex & non‑linear optimisation; decision‑making under uncertainty; experimental design & fast iteration; estimation & inference; Monte Carlo; time‑series‑aware evaluation.
+**Quantitative & Statistical Methods**  
+Probability and statistics applied to modelling and evaluation; numerical methods for simulation and stability analysis; optimisation under constraints; Monte Carlo methods; estimation and inference with explicit uncertainty tracking; time-series-aware evaluation (rolling splits, leakage checks, regime sensitivity).
 
-**Machine Learning & Data**  
-Bayesian inference; regression & classification; unsupervised learning (clustering, PCA); model evaluation, calibration & robustness; traceability & experiment tracking; RAG/LLM pipelines for technical search; data cleaning & feature engineering.
+**Modelling, ML & Data Analysis**  
+Bayesian modelling; regression and classification; unsupervised methods (clustering, PCA); feature construction and ablation; model validation, calibration, and robustness testing; experiment design with controlled assumptions; traceable and reproducible analysis workflows.
 
-**Systems & Performance**  
-HPC/GPU mindset; vectorisation & profiling; simulation & automated testing; Linux tooling & CI; networking stacks and industrial protocols (IEC 60870, DNP3).
+**Research Engineering & Simulation**  
+Simulation-driven analysis; automated verification and testing; invariant checking and parity validation; sensitivity and trade-off analysis; performance and correctness evaluation under constrained assumptions.
+
+**Systems, Performance & Compute**  
+High-performance computing mindset; vectorisation and profiling; performance-aware Python and C++; Linux-based development; batch and automated workflows; familiarity with GPU/HPC concepts from numerical and ML workloads.
 
 **Programming**  
-C++, Python, SQL, C, C#, MATLAB.  
-Ecosystem: standard library & STL; NumPy/Pandas; pytest; CMake; basic CUDA concepts; sockets & async I/O.
+Primary: Python, C++
+Additional: C, C#, MATLAB, SQL
 
-**Tooling**  
-Git; VS Code/Visual Studio/CLion; LTspice; Qdrant; Docker basics; logging & tracing.
+Python for data analysis, modelling, and automation; C++ for performance-critical components and systems-level work; emphasis on correctness, clarity, and reproducibility over premature optimisation.
 
-**Domains**  
-High‑Performance Computing; Embedded/real‑time systems; Digital communications; RAG/LLM systems; Digital signal processing.
+**Tooling & Infrastructure**  
+Git-based workflows; automated testing (pytest); build systems (CMake); containerisation basics (Docker); vector databases (Qdrant); local LLM integration for technical search; logging, tracing, and structured debugging.
 
-**Languages**  
-English (Native); Afrikaans (B2 CEFR).
-
-**Awards**  
-President’s Award / Duke of Edinburgh (Gold).
+**Applied Domains**  
+Scientific computing; simulation and verification; digital signal processing; communications systems; embedded and real-time constraints; research tooling for complex technical systems.
 
 **Operating Style**  
-Clear documentation & reporting; independent project ownership; collaborative teamwork; structured problem‑solving; pragmatic delivery with measurement & feedback loops.
+Research-driven problem solving; explicit assumptions and constraints; rapid iteration with measurement; clear technical writing; independent ownership of ambiguous problems; collaborative work with structured feedback loops.
+
+**Languages**  
+English (Native); Afrikaans (B2).
+
+**Awards**
+President’s Award (Gold) which is the South African version of Duke of Edinburgh .
 
 ---
 
