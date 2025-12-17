@@ -92,10 +92,8 @@ def parse_date(meta: dict):
 def latex_to_html(lx: str) -> str:
     html = lx
 
-    # Strip comments
     html = re.sub(r"(?<!\\)%.*", "", html)
 
-    # Normalise LaTeX escapes
     html = html.replace("\\%", "%")
     html = html.replace("\\&", "&")
     html = html.replace("\\@", "")
@@ -104,7 +102,6 @@ def latex_to_html(lx: str) -> str:
     html = html.replace("--", "–")
     html = html.replace("~", " ")
 
-    # twocolentry
     html = re.sub(
         r"\\begin{twocolentry}\s*\{(.*?)\}\s*(.*?)\\end{twocolentry}",
         r"""
@@ -119,24 +116,19 @@ def latex_to_html(lx: str) -> str:
         flags=re.S
     )
 
-    # onecolentry
     html = re.sub(r"\\begin{onecolentry}", '<div class="onecol">', html)
     html = re.sub(r"\\end{onecolentry}", "</div>", html)
 
-    # highlights
     html = re.sub(r"\\begin{highlights}", "<ul>", html)
     html = re.sub(r"\\end{highlights}", "</ul>", html)
     html = re.sub(r"\\item\s*", "<li>", html)
     html = re.sub(r"(<li>.*?)(?=<li>|</ul>)", r"\1</li>", html, flags=re.S)
 
-    # text formatting
     html = re.sub(r"\\textbf\{(.*?)\}", r"<strong>\1</strong>", html)
     html = re.sub(r"\\textit\{(.*?)\}", r"<em>\1</em>", html)
 
-    # spacing
     html = re.sub(r"\\vspace\{.*?\}", '<div class="spacer"></div>', html)
 
-    # line breaks
     html = html.replace("\\\\", "<br>")
     html = re.sub(r"\n\s*\n+", "\n", html)
 
@@ -147,7 +139,6 @@ def latex_to_html(lx: str) -> str:
 # ============================================================
 
 def latex_inline_to_html(s: str) -> str:
-    """Minimal LaTeX cleanup for inline header fields."""
     if not s:
         return ""
     s = re.sub(r"(?<!\\)%.*", "", s)
@@ -169,7 +160,7 @@ def main():
     headline = latex_inline_to_html(header["headline"])
 
     contacts_html = " | ".join(
-        latex_inline_to_html(c["value"])
+        f'<a href="{c["href"]}">{latex_inline_to_html(c["value"])}</a>'
         for c in header["contacts"]
     )
 
@@ -212,25 +203,39 @@ def main():
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 @import url("https://cdn.jsdelivr.net/npm/latex.css@1.0.0/dist/latex.min.css");
+
 body {{
   max-width: 900px;
   margin: 48px auto;
   font-family: "Latin Modern Roman", "Computer Modern Serif", "CMU Serif", serif;
   color: #111;
 }}
+
 .header {{
   text-align: center;
   margin-bottom: 24px;
 }}
+
 .header h1 {{
   font-size: 32px;
   margin-bottom: 6px;
 }}
+
 .header .tagline,
 .header .contacts {{
   font-size: 14px;
   margin-bottom: 4px;
 }}
+
+/* Make header links look like plain text */
+.header a,
+.header a:visited,
+.header a:hover,
+.header a:active {{
+  color: inherit;
+  text-decoration: none;
+}}
+
 h2 {{
   border-bottom: 1px solid #000;
   padding-bottom: 4px;
@@ -238,19 +243,26 @@ h2 {{
   margin-bottom: 10px;
   font-size: 20px;
 }}
+
 .entry {{ margin-bottom: 4px; }}
+
 .entry-header {{
   display: grid;
   grid-template-columns: 1fr auto;
   gap: 16px;
 }}
+
 .entry-right {{
   text-align: right;
   white-space: nowrap;
 }}
+
 .onecol {{ margin-bottom: 6px; }}
+
 ul {{ margin: 4px 0 0 18px; padding: 0; }}
+
 li {{ margin-bottom: 2px; }}
+
 .spacer {{ height: 8px; }}
 </style>
 </head>
