@@ -42,7 +42,7 @@ tags: [Leadership, Activities, Interests, Fencing, Quant, Durham]
 
 ```latex
 \begin{onecolentry}
-    \textbf{Research Interests:} Time-series modelling, signal validation, regime dependence in financial and physical systems.
+    \textbf{Research Interests:} Time-series modelling, signal validation, regime dependence in financial and physical systems. \\
     \textbf{Leadership:} Bishops Diocesan College Fencing Team Captain; Durham Fresher Representative (2022--23). \\
     \textbf{Activities:} Durham University Fencing Team; Boxing (Student Fight Night). \\
     \textbf{Achievements:} Weldon le Huray Fencing Scholarship (2020--24); South Africa U17 Fencing Champion; President’s Award (Gold).
