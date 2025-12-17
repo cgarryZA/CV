@@ -15,7 +15,7 @@ Use the template branch to start your own CV
 ```bash
 git clone -b template https://github.com/cgarryZA/CV.git my-cv
 ```
----
+
 ---
 
 ## Live Links
