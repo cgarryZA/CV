@@ -211,10 +211,11 @@ def main():
 <title>{name} — CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
+@import url("https://cdn.jsdelivr.net/npm/latex.css@1.0.0/dist/latex.min.css");
 body {{
   max-width: 900px;
   margin: 48px auto;
-  font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-family: "Latin Modern Roman", "Computer Modern Serif", "CMU Serif", serif;
   color: #111;
 }}
 .header {{
