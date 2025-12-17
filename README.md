@@ -10,6 +10,14 @@ This avoids duplicated CVs, stale PDFs, and hand-edited versions drifting out of
 
 ---
 
+Use the template branch to start your own CV
+
+```bash
+git clone -b template https://github.com/cgarryZA/CV.git my-cv
+```
+---
+---
+
 ## Live Links
 
 - **Website:** https://christiangarry.com  
