@@ -221,20 +221,18 @@ PREAMBLE_LATEX = r"""
     \sbox\ANDbox{$|$}
 
     \begin{header}
-    {\fontsize{20pt}{24pt}\selectfont \textbf{Christian Garry}}\\[3pt]
+    {\fontsize{20pt}{24pt}\selectfont \textbf{<<NAME>>}}\\[3pt]
 
     \vspace{5 pt}
 
-    % --- Row 1: tagline (single line) ---
     \noindent\makebox[\textwidth][c]{%
         \small
-        MSc Scientific Computing~\textbar{}~Probability · Statistics · Optimisation~\textbar{}~C++/Python
+        <<HEADLINE>>
     }\\[2pt]
 
-    % --- Row 2: contacts (single line) ---
     \noindent\makebox[\textwidth][c]{%
         \small
-        \mbox{\hrefWithoutArrow{mailto:christiangarry.southafrica@gmail.com}{christiangarry.southafrica@gmail.com}}~\textbar{}~\mbox{\hrefWithoutArrow{tel:+447932326827}{+44 79 3232 6827}}~\textbar{}~\mbox{\hrefWithoutArrow{https://christiangarry.com}{christiangarry.com}}~\textbar{}~\mbox{\hrefWithoutArrow{https://www.linkedin.com/in/christian-tt-garry/}{linkedin.com/in/christian-tt-garry}}
+        <<CONTACTS>>
     }
     \end{header}
 
