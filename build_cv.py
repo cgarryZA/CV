@@ -86,7 +86,159 @@ def _should_include_in_cv(meta: dict) -> bool:
 
 # === PREAMBLE — UNCHANGED ===
 PREAMBLE_LATEX = r"""
-<<UNCHANGED LATEX PREAMBLE — EXACTLY AS YOU PROVIDED>>
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Christian Garry's CV},
+    pdfauthor={Christian Garry},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX{}
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\newcommand{\leadershipitem}[3]{%
+  \noindent\textbf{#1} — #2 \hfill \textit{#3}\par
+}
+
+\raggedright{}
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.2 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0 cm + 0.00001 cm}{0 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+\newenvironment{twocolentry}[2][]{
+    \onecolentry{}
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn{} \raggedleft{} \secondColumn{}
+    \end{paracol}
+    \endonecolentry{}
+}
+\newenvironment{threecolentry}[3][]{
+    \onecolentry{}
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright{} #2} \switchcolumn{}
+}{
+    \switchcolumn{} \raggedleft{} \thirdColumn{}
+    \end{paracol}
+    \endonecolentry{}
+}
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep{}
+}
+\newcommand{\placelastupdatedtext}{%
+  \AddToShipoutPictureFG*{%
+    \put(\LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},\LenToUnit{\paperheight-1.0 cm})
+    {\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}
+\let\hrefWithoutArrow\href{}
+
+\begin{document}
+    \newcommand{\AND}{\unskip{}
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox{}
+        \ignorespaces{}
+    }
+    \newsavebox\ANDbox{}
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+    {\fontsize{20pt}{24pt}\selectfont \textbf{Christian Garry}}\\[3pt]
+
+    \vspace{5 pt}
+
+    % --- Row 1: tagline (single line) ---
+    \noindent\makebox[\textwidth][c]{%
+        \small
+        MSc Scientific Computing~\textbar{}~Probability · Statistics · Optimisation~\textbar{}~C++/Python
+    }\\[2pt]
+
+    % --- Row 2: contacts (single line) ---
+    \noindent\makebox[\textwidth][c]{%
+        \small
+        \mbox{\hrefWithoutArrow{mailto:christiangarry.southafrica@gmail.com}{christiangarry.southafrica@gmail.com}}~\textbar{}~\mbox{\hrefWithoutArrow{tel:+447932326827}{+44 79 3232 6827}}~\textbar{}~\mbox{\hrefWithoutArrow{https://christiangarry.com}{christiangarry.com}}~\textbar{}~\mbox{\hrefWithoutArrow{https://www.linkedin.com/in/christian-tt-garry/}{linkedin.com/in/christian-tt-garry}}
+    }
+    \end{header}
+
+    \vspace{-0.35 cm}
 """
 
 def main():
@@ -149,6 +301,6 @@ def main():
     #        if p.exists():
     #            p.unlink()
     #            print(f"[CLEAN] Deleted {p.name}")
-    
+
 if __name__ == "__main__":
     main()
