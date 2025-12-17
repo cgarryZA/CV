@@ -23,6 +23,7 @@ tags: [Team Project, EV, Control Systems, Power Electronics, VFD]
 
 ### Electronic Differential for Electric Vehicles — Year 3 Design Project  
 *Team of 6; torque-vectoring architecture and system-level feasibility*
+Third year group project, personally focusing on the variable-frequency drive system and PCB. Also co-authoring the wiring and integration sections.
 
 ### Body
 
