@@ -13,6 +13,7 @@ tags: [Leadership, Activities, Interests, Fencing, Quant, Durham]
 ### Head
 
 ### Leadership, Activities & Interests
+
 Research Interests: Time-series modelling, signal validation, regime dependence in financial and physical systems.
 Leadership: Bishops Diocesan College Fencing Team Captain; Durham Fresher Representative (2022--23).
 Activities: Durham University Fencing Team; Boxing (Student Fight Night).
