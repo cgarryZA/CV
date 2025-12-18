@@ -40,7 +40,7 @@ Research-driven problem solving; explicit assumptions and constraints; rapid ite
 English (Native); Afrikaans (B2).
 
 **Awards**
-President’s Award (Gold) which is the South African version of Duke of Edinburgh .
+President’s Award (Gold) which is the South African version of Duke of Edinburgh.
 
 ---
 
@@ -49,7 +49,7 @@ President’s Award (Gold) which is the South African version of Duke of Edinbur
 ```latex
 \begin{onecolentry}
     \begin{highlights}
-        \item Probability \& Statistics; Numerical Methods; Optimisation; Monte Carlo Simulation; Python; C++; High-Performance Computing; Linear Algebra
+        Probability \& Statistics; Numerical Methods; Optimisation; Monte Carlo Simulation; Python; C++; High-Performance Computing; Linear Algebra
     \end{highlights}
 \end{onecolentry}
 ```

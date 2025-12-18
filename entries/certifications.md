@@ -6,41 +6,40 @@ type: certificications
 section: Certifications
 tags: [Certifications, Quant]
 ---
+### Head
 
-### General Skills
+### Certifications
 
-**Quantitative & Statistical Methods**  
-Probability and statistics applied to modelling and evaluation; numerical methods for simulation and stability analysis; optimisation under constraints; Monte Carlo methods; estimation and inference with explicit uncertainty tracking; time-series-aware evaluation (rolling splits, leakage checks, regime sensitivity).
+MITx 15.455x -- Mathematical Methods for Quantitative Finance
 
-**Modelling, ML & Data Analysis**  
-Bayesian modelling; regression and classification; unsupervised methods (clustering, PCA); feature construction and ablation; model validation, calibration, and robustness testing; experiment design with controlled assumptions; traceable and reproducible analysis workflows.
+Columbia University -- Introduction to Financial Engineering and Risk Management
 
-**Research Engineering & Simulation**  
-Simulation-driven analysis; automated verification and testing; invariant checking and parity validation; sensitivity and trade-off analysis; performance and correctness evaluation under constrained assumptions.
 
-**Systems, Performance & Compute**  
-High-performance computing mindset; vectorisation and profiling; performance-aware Python and C++; Linux-based development; batch and automated workflows; familiarity with GPU/HPC concepts from numerical and ML workloads.
+### Body
 
-**Programming**  
-Primary: Python, C++
-Additional: C, C#, MATLAB, SQL
+### MITx 15.455x — Mathematical Methods for Quantitative Finance (edX)
 
-Python for data analysis, modelling, and automation; C++ for performance-critical components and systems-level work; emphasis on correctness, clarity, and reproducibility over premature optimisation.
+Built the core mathematical toolkit used in modern quantitative finance and financial engineering, with an emphasis on decision-making under uncertainty.
 
-**Tooling & Infrastructure**  
-Git-based workflows; automated testing (pytest); build systems (CMake); containerisation basics (Docker); vector databases (Qdrant); local LLM integration for technical search; logging, tracing, and structured debugging.
+Covered probability foundations (laws of probability, common distributions in finance, LLN/CLT, asymptotics), and statistical inference (hypothesis testing, regression, and econometric time-series analysis).
 
-**Applied Domains**  
-Scientific computing; simulation and verification; digital signal processing; communications systems; embedded and real-time constraints; research tooling for complex technical systems.
+Studied time-series models used in practice (random walks, ARMA, and volatility modelling via GARCH(1,1)), including forecasting/trading-oriented framing.
 
-**Operating Style**  
-Research-driven problem solving; explicit assumptions and constraints; rapid iteration with measurement; clear technical writing; independent ownership of ambiguous problems; collaborative work with structured feedback loops.
+Developed continuous-time stochastic process foundations: discrete-to-continuous limits, Brownian motion, and an introduction to Itô calculus with applications to derivative pricing and risk.
 
-**Languages**  
-English (Native); Afrikaans (B2).
+Applied linear algebra for asset pricing (covariance/correlation structure) and optimisation techniques (Lagrange multipliers, inequality constraints / quadratic programming, dynamic programming / Markov decision processes), plus numerical methods (Monte Carlo, quadratic programming).
 
-**Awards**
-President’s Award (Gold) which is the South African version of Duke of Edinburgh .
+### Columbia University — Introduction to Financial Engineering and Risk Management (Coursera)
+
+Introduced the core principles of financial engineering and risk management, focusing on arbitrage-free pricing and the mathematical foundations used to value fixed income and derivatives.
+
+Covered prerequisite tools in probability and optimisation, then moved into fixed income: present value (PV) calculations, bond fundamentals (including floating-rate bonds), and term structure of interest rates.
+
+Developed derivative pricing intuition across forwards, futures, swaps, and options, including hedging concepts and practical worked examples (including spreadsheet-style implementations).
+
+Built option pricing from the ground up using the 1-period binomial model, then extended to the multi-period binomial model (dynamic replication / self-financing / risk-neutral pricing), including American option pricing.
+
+Introduced the Black–Scholes model as a continuous-time limit/extension, and applied the framework to related products (futures/forwards and dividend considerations).
 
 ---
 
@@ -49,8 +48,8 @@ President’s Award (Gold) which is the South African version of Duke of Edinbur
 ```latex
 \begin{onecolentry}
     \begin{highlights}
-        \item MITx 15.455x -- Mathematical Methods for Quantitative Finance\\
-        \item Columbia University -- Introduction to Financial Engineering and Risk Management\\
+        \item MITx 15.455x~--~Mathematical Methods for Quantitative Finance (In Progress)\\
+        \item Columbia University~--~Introduction to Financial Engineering and Risk Management\\
     \end{highlights}
 \end{onecolentry}
 ```

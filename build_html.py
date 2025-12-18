@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
+from __future__ import annotations
+
 import re
 import json
+import html as _html
 from datetime import datetime
 from pathlib import Path
 
@@ -18,26 +21,37 @@ OUTPUT_HTML = ROOT / "cv.html"
 # ============================================================
 
 SECTION_ORDER = [
-    ("education",  "Education"),
-    ("experience", "Experience"),
-    ("research",   "Projects & Research"),
-    ("skills",     "Skills & Certifications"),
-    ("leadership", "Leadership, Activities & Interests"),
+    ("education",      "Education"),
+    ("experience",     "Experience"),
+    ("research",       "Projects & Research"),
+    ("certifications", "Certifications"),
+    ("leadership",     "Leadership, Activities & Interests"),
+    ("skills",         "Key Skills"),
 ]
 
 # ============================================================
 # Regex
 # ============================================================
 
-FRONT_MATTER_RE = re.compile(
-    r"^---\s*\r?\n(.*?)\r?\n---\s*\r?\n",
-    re.S | re.M
+FRONT_MATTER_RE = re.compile(r"^---\s*\r?\n(.*?)\r?\n---\s*\r?\n", re.S | re.M)
+LATEX_BLOCK_RE  = re.compile(r"```latex\s*(.*?)\s*```", re.S | re.I)
+
+# Link macros commonly seen in your CV LaTeX
+HREF_RE = re.compile(r"\\href(?:WithoutArrow)?\{(.*?)\}\{(.*?)\}", re.S)
+LEADERSHIPITEM_RE = re.compile(
+    r"\\leadershipitem\{(.*?)\}\{(.*?)\}\{(.*?)\}",
+    re.S
 )
 
-LATEX_BLOCK_RE = re.compile(
-    r"```latex\s*(.*?)\s*```",
-    re.S | re.I
-)
+_MONTHS = {
+    "jan": 1, "january": 1,
+    "feb": 2, "february": 2,
+    "mar": 3, "march": 3,
+    "apr": 4, "april": 4,
+    "may": 5, "jun": 6, "jul": 7,
+    "aug": 8, "sep": 9, "sept": 9,
+    "oct": 10, "nov": 11, "dec": 12,
+}
 
 # ============================================================
 # Front matter helpers
@@ -75,14 +89,27 @@ def extract_latex(body: str) -> str:
     return m.group(1).strip() if m else ""
 
 def parse_date(meta: dict):
-    for key in ("date", "period"):
-        val = meta.get(key)
-        if not val:
-            continue
+    """
+    Match build_cv.py behaviour more closely:
+    - Try YYYY-MM-DD, YYYY-MM, YYYY
+    - If 'period' exists, try parsing left side like 'Sep 2024'
+    """
+    d = (meta.get("date") or "").strip()
+    for fmt in ("%Y-%m-%d", "%Y-%m", "%Y"):
         try:
-            return datetime.strptime(val[:10], "%Y-%m-%d")
+            return datetime.strptime(d[:len(fmt)], fmt)
         except Exception:
             pass
+
+    period = (meta.get("period") or "").replace("–", "-").replace("—", "-")
+    if period:
+        left = period.split("-", 1)[0].strip()
+        parts = left.replace(",", " ").split()
+        if len(parts) >= 2 and parts[0].lower() in _MONTHS:
+            year = next((p for p in parts if p.isdigit() and len(p) == 4), None)
+            if year:
+                return datetime(int(year), _MONTHS[parts[0].lower()], 1)
+
     return datetime(1900, 1, 1)
 
 # ============================================================
@@ -92,8 +119,10 @@ def parse_date(meta: dict):
 def latex_to_html(lx: str) -> str:
     html = lx
 
+    # Strip LaTeX comments (but leave escaped \%)
     html = re.sub(r"(?<!\\)%.*", "", html)
 
+    # Basic escapes / symbols
     html = html.replace("\\%", "%")
     html = html.replace("\\&", "&")
     html = html.replace("\\@", "")
@@ -102,6 +131,29 @@ def latex_to_html(lx: str) -> str:
     html = html.replace("--", "–")
     html = html.replace("~", " ")
 
+    # Links: \href{url}{text} and \hrefWithoutArrow{url}{text}
+    def _href_sub(m: re.Match) -> str:
+        url = m.group(1).strip()
+        txt = m.group(2).strip()
+        url_esc = _html.escape(url, quote=True)
+        txt_esc = _html.escape(txt)
+        return f'<a href="{url_esc}">{txt_esc}</a>'
+    html = HREF_RE.sub(_href_sub, html)
+
+    # leadershipitem macro (defined in build_cv preamble)
+    def _leadership_sub(m: re.Match) -> str:
+        a = _html.escape(m.group(1).strip())
+        b = _html.escape(m.group(2).strip())
+        c = _html.escape(m.group(3).strip())
+        return (
+            '<div class="leadership-item">'
+            f'<div class="leadership-left"><strong>{a}</strong> — {b}</div>'
+            f'<div class="leadership-right"><em>{c}</em></div>'
+            '</div>'
+        )
+    html = LEADERSHIPITEM_RE.sub(_leadership_sub, html)
+
+    # twocolentry blocks
     html = re.sub(
         r"\\begin{twocolentry}\s*\{(.*?)\}\s*(.*?)\\end{twocolentry}",
         r"""
@@ -160,7 +212,7 @@ def main():
     headline = latex_inline_to_html(header["headline"])
 
     contacts_html = " | ".join(
-        f'<a href="{c["href"]}">{latex_inline_to_html(c["value"])}</a>'
+        f'<a href="{_html.escape(c["href"], quote=True)}">{_html.escape(latex_inline_to_html(c["value"]))}</a>'
         for c in header["contacts"]
     )
 
@@ -173,13 +225,9 @@ def main():
         if not should_include(meta):
             continue
 
-        sec = (
-            meta.get("cv_section")
-            or meta.get("type")
-            or meta.get("section")
-            or ""
-        ).strip().lower()
-
+        # IMPORTANT: Match build_cv.py logic:
+        # Prefer cv_section or section; only fall back to type if section isn't set.
+        sec = (meta.get("cv_section") or meta.get("section") or meta.get("type") or "").strip().lower()
         if not sec:
             continue
 
@@ -189,7 +237,7 @@ def main():
 
         sections.setdefault(sec, []).append({
             "date": parse_date(meta),
-            "html": latex_to_html(latex)
+            "html": latex_to_html(latex),
         })
 
     for key in sections:
@@ -199,7 +247,7 @@ def main():
 <html lang="en">
 <head>
 <meta charset="utf-8">
-<title>{name} — CV</title>
+<title>{_html.escape(name)} — CV</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <style>
 @import url("https://cdn.jsdelivr.net/npm/latex.css@1.0.0/dist/latex.min.css");
@@ -260,17 +308,28 @@ h2 {{
 .onecol {{ margin-bottom: 6px; }}
 
 ul {{ margin: 4px 0 0 18px; padding: 0; }}
-
 li {{ margin-bottom: 2px; }}
 
 .spacer {{ height: 0px; }}
+
+/* leadershipitem rendering */
+.leadership-item {{
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 16px;
+  margin-bottom: 4px;
+}}
+.leadership-right {{
+  text-align: right;
+  white-space: nowrap;
+}}
 </style>
 </head>
 <body>
 
 <div class="header">
-  <h1>{name}</h1>
-  <div class="tagline">{headline}</div>
+  <h1>{_html.escape(name)}</h1>
+  <div class="tagline">{_html.escape(headline)}</div>
   <div class="contacts">{contacts_html}</div>
 </div>
 """]
@@ -279,7 +338,7 @@ li {{ margin-bottom: 2px; }}
         items = sections.get(key)
         if not items:
             continue
-        out.append(f"<h2>{title}</h2>")
+        out.append(f"<h2>{_html.escape(title)}</h2>")
         for it in items:
             out.append(it["html"])
 
@@ -287,8 +346,6 @@ li {{ margin-bottom: 2px; }}
 
     OUTPUT_HTML.write_text("\n".join(out), encoding="utf-8")
     print(f"[OK] Wrote {OUTPUT_HTML}")
-
-# ============================================================
 
 if __name__ == "__main__":
     main()

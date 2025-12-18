@@ -13,11 +13,12 @@ OUTPUT_PDF  = ROOT / "cv.pdf"
 
 # --- Sections & order ---
 SECTION_ORDER = [
-    ("education",  "Education"),
-    ("experience", "Experience"),
-    ("research",   "Projects \\& Research"),
-    ("skills",     "Skills \\& Certifications"),
-    ("leadership", "Leadership, Activities \\& Interests"),
+    ("education",      "Education"),
+    ("experience",     "Experience"),
+    ("research",       "Projects \\& Research"),
+    ("certifications", "Certifications"),
+    ("leadership",     "Leadership, Activities \\& Interests"),
+    ("skills",         "Key Skills")
 ]
 
 ENTRY_SPACED_SECTIONS = {"education", "experience", "research"}
