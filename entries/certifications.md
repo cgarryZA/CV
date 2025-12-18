@@ -10,9 +10,7 @@ tags: [Certifications, Quant]
 
 ### Certifications
 
-MITx 15.455x -- Mathematical Methods for Quantitative Finance
-
-Columbia University -- Introduction to Financial Engineering and Risk Management
+MITx 15.455x -- Mathematical Methods for Quantitative Finance; Columbia University -- Introduction to Financial Engineering and Risk Management
 
 
 ### Body
