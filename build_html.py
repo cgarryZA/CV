@@ -21,7 +21,7 @@ SECTION_ORDER = [
     ("education",  "Education"),
     ("experience", "Experience"),
     ("research",   "Projects & Research"),
-    ("skills",     "Key Skills"),
+    ("skills",     "Skills & Certifications"),
     ("leadership", "Leadership, Activities & Interests"),
 ]
 
@@ -263,7 +263,7 @@ ul {{ margin: 4px 0 0 18px; padding: 0; }}
 
 li {{ margin-bottom: 2px; }}
 
-.spacer {{ height: 8px; }}
+.spacer {{ height: 0px; }}
 </style>
 </head>
 <body>

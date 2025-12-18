@@ -51,8 +51,7 @@ Graduate communications engineer focused on **Python-based engineering tooling a
 \begin{onecolentry}
     \begin{highlights}
         \item Implemented and adapted C/C++ communication components (TCP/IP, serial) to support data exchange between simulated systems and PC-based engineering tools.
-        \item Developed a Python-based RAG pipeline to structure and query internal technical documentation and codebases using a retrieval-augmented workflow (local LLMs, vector search) reducing engineer time to answer by >90%.
-        \item Adapted existing network signal and waveform-generation utilities to support development and integration testing workflows.
+        \item Developed a Python-based RAG pipeline to structure and query internal technical documentation and codebases using a retrieval-augmented workflow (local LLMs, vector search) reducing engineer time to answer by >90\%.
     \end{highlights}
 \end{onecolentry}
 ```

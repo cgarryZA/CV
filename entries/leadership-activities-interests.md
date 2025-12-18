@@ -2,7 +2,6 @@
 cv: true
 id: leadership-activities-interests-2025
 title: Leadership, Activities & Interests
-date: 2001-08-14
 type: profile
 section: Leadership & Interests
 links.github: https://github.com/cgarryZA
@@ -47,9 +46,9 @@ Achievements: Weldon le Huray Fencing Scholarship (2020--24); South Africa U17 F
 
 ```latex
 \begin{onecolentry}
-    \textbf{Research Interests:} Time-series modelling, signal validation, regime dependence in financial and physical systems. \\
+    \textbf{Research Interests:} Time-series modelling, signal validation, regime dependence in financial systems. \\
     \textbf{Leadership:} Bishops Diocesan College Fencing Team Captain; Durham Fresher Representative (2022--23). \\
     \textbf{Activities:} Durham University Fencing Team; Boxing (Student Fight Night). \\
-    \textbf{Achievements:} Weldon le Huray Fencing Scholarship (2020--24); South Africa U17 Fencing Champion; President’s Award (Gold).
+    \textbf{Achievements:} South Africa U17 Fencing Champion \& Weldon le Huray Scholar; President’s Award (Gold).
 \end{onecolentry}
 ```

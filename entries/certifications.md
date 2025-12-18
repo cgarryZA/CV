@@ -1,10 +1,10 @@
 ---
 cv: true
-id: general-skills-2025
-title: General Skills
-type: skills
-section: Skills
-tags: [Skills, Quant, Engineering, HPC, ML, C++, Python]
+id: certifications
+title: Certifications
+type: certificications
+section: Certifications
+tags: [Certifications, Quant]
 ---
 
 ### General Skills
@@ -49,7 +49,8 @@ President’s Award (Gold) which is the South African version of Duke of Edinbur
 ```latex
 \begin{onecolentry}
     \begin{highlights}
-        \item Probability \& Statistics; Numerical Methods; Optimisation; Monte Carlo Simulation; Python; C++; High-Performance Computing; Linear Algebra
+        \item MITx 15.455x -- Mathematical Methods for Quantitative Finance\\
+        \item Columbia University -- Introduction to Financial Engineering and Risk Management\\
     \end{highlights}
 \end{onecolentry}
 ```

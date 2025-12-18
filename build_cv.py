@@ -16,7 +16,7 @@ SECTION_ORDER = [
     ("education",  "Education"),
     ("experience", "Experience"),
     ("research",   "Projects \\& Research"),
-    ("skills",     "Key Skills"),
+    ("skills",     "Skills \\& Certifications"),
     ("leadership", "Leadership, Activities \\& Interests"),
 ]
 

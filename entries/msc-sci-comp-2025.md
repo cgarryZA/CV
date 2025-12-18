@@ -49,7 +49,7 @@ The degree strengthens my grounding in probabilistic modelling, optimisation, an
 \end{twocolentry}
 
 \begin{twocolentry}
-  {Sep 2025~--~Present}
+  {Sep 2025~--~Exp. Sep 2026}
   \textbf{Durham University}
 \end{twocolentry}
 

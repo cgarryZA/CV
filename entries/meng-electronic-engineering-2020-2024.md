@@ -61,10 +61,11 @@ Four-year integrated Master’s progressing from core engineering mathematics an
   \textbf{Durham University}
 \end{twocolentry}
 
+\vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
     \item Upper Second-Class Honours (2:1).
-    \item \textbf{Dissertation:} \textit{Silicon Carbide JFET CPU} — simulation-driven CPU design with instruction-level verification and architectural trade-off analysis.
+    \item \textbf{Dissertation:} \textit{Silicon Carbide JFET CPU} — simulation-driven CPU design with instruction-level verification.
   \end{highlights}
 \end{onecolentry}
 ```
