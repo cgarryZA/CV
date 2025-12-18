@@ -23,6 +23,7 @@ tags: [Team Project, Hydrogen, Cryogenics, Systems Engineering, Sensors, Aerospa
 
 ### Hydrogen Fuel System for Gas Turbines — Year 2 Design Project  
 *Team of 5; cryogenic storage, sensing, and safety systems for regional aircraft*
+
 Second year group project, personally focusing on the design of the electronic systems for the tank monitoring and deployment. I also reviewed several sections of the report.
 
 ### Body
