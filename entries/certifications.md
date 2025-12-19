@@ -15,7 +15,7 @@ MITx 15.455x - Mathematical Methods for Quantitative Finance; Columbia Universit
 
 ### Body
 
-### MITx 15.455x — Mathematical Methods for Quantitative Finance (edX)
+### MITx 15.455x — Mathematical Methods for Quantitative Finance (edX) (In Progress)
 
 Built the core mathematical toolkit used in modern quantitative finance and financial engineering, with an emphasis on decision-making under uncertainty.
 
