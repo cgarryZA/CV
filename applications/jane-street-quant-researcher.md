@@ -35,6 +35,9 @@ Quantitative-finance researcher (MSc Scientific Computing, Distinction track ~86
 - Tracking **Distinction** (~86%). Directly relevant coursework: **Bayesian inference & statistics** (MCMC, Gaussian processes — incl. a high-dimensional gene-expression *survival regression* and **time-series / regression** modelling), **convex optimisation** (duality, KKT) applied to estimation & SVMs, **random forests/boosting & deep learning**, and **GPU/HPC performance engineering** (for large financial datasets).
 - Standout marks: **95%** Performance/GPU, **94%** Machine Learning & Statistics, **~89%** in both Advanced Bayesian ML modules. Python, C, R.
 
+**Mathematics modules (NetMath) — University of Illinois Urbana-Champaign** · *2026*
+- Credit-bearing, exam-assessed proof-based mathematics taken alongside the MSc: **MATH 314** Introduction to Higher Mathematics (in progress, current average 100%) and **MATH 447** Real Analysis (upcoming) — sequences and convergence, metric spaces, compactness, and Riemann integration. Strengthens the rigorous-analysis foundations under stochastic calculus and probability.
+
 **MEng Electronic Engineering — Durham University** · *2020–2024 · Upper Second-Class Honours (2:1)*
 
 ---

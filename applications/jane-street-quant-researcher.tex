@@ -1,0 +1,242 @@
+
+\documentclass[10pt, letterpaper]{article}
+
+% Packages:
+\usepackage[
+    ignoreheadfoot,
+    top=2 cm,
+    bottom=2 cm,
+    left=2 cm,
+    right=2 cm,
+    footskip=1.0 cm
+]{geometry}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 0, 0}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+    pdftitle={Christian Garry's CV},
+    pdfauthor={Christian Garry},
+    pdfcreator={LaTeX with RenderCV},
+    colorlinks=true,
+    urlcolor=primaryColor
+]{hyperref}
+\usepackage[pscoord]{eso-pic}
+\usepackage{calc}
+\usepackage{bookmark}
+\usepackage{lastpage}
+\usepackage{changepage}
+\usepackage{paracol}
+\usepackage{ifthen}
+\usepackage{needspace}
+\usepackage{iftex}
+
+\ifPDFTeX{}
+    \input{glyphtounicode}
+    \pdfgentounicode=1
+    \usepackage[T1]{fontenc}
+    \usepackage[utf8]{inputenc}
+    \usepackage{lmodern}
+\fi
+
+\usepackage{charter}
+
+\newcommand{\leadershipitem}[3]{%
+  \noindent\textbf{#1} — #2 \hfill \textit{#3}\par
+}
+
+\raggedright{}
+\AtBeginEnvironment{adjustwidth}{\partopsep0pt}
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\topskip}{0pt}
+\setlength{\columnsep}{0.15cm}
+\pagenumbering{gobble}
+
+\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
+\titlespacing{\section}{-1pt}{0.2 cm}{0.2 cm}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\small$\bullet$}}$}
+\newenvironment{highlights}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=0 cm + 10pt
+    ]
+}{
+    \end{itemize}
+}
+\newenvironment{highlightsforbulletentries}{
+    \begin{itemize}[
+        topsep=0.10 cm,
+        parsep=0.10 cm,
+        partopsep=0pt,
+        itemsep=0pt,
+        leftmargin=10pt
+    ]
+}{
+    \end{itemize}
+}
+\newenvironment{onecolentry}{
+    \begin{adjustwidth}{0 cm + 0.00001 cm}{0 cm + 0.00001 cm}
+}{
+    \end{adjustwidth}
+}
+\newenvironment{twocolentry}[2][]{
+    \onecolentry{}
+    \def\secondColumn{#2}
+    \setcolumnwidth{\fill, 4.5 cm}
+    \begin{paracol}{2}
+}{
+    \switchcolumn{} \raggedleft{} \secondColumn{}
+    \end{paracol}
+    \endonecolentry{}
+}
+\newenvironment{threecolentry}[3][]{
+    \onecolentry{}
+    \def\thirdColumn{#3}
+    \setcolumnwidth{, \fill, 4.5 cm}
+    \begin{paracol}{3}
+    {\raggedright{} #2} \switchcolumn{}
+}{
+    \switchcolumn{} \raggedleft{} \thirdColumn{}
+    \end{paracol}
+    \endonecolentry{}
+}
+\newenvironment{header}{
+    \setlength{\topsep}{0pt}\par\kern\topsep\centering\linespread{1.5}
+}{
+    \par\kern\topsep{}
+}
+\newcommand{\placelastupdatedtext}{%
+  \AddToShipoutPictureFG*{%
+    \put(\LenToUnit{\paperwidth-2 cm-0 cm+0.05cm},\LenToUnit{\paperheight-1.0 cm})
+    {\vtop{{\null}\makebox[0pt][c]{
+        \small\color{gray}\textit{Last updated in September 2024}\hspace{\widthof{Last updated in September 2024}}
+    }}}%
+  }%
+}
+\let\hrefWithoutArrow\href{}
+
+\begin{document}
+    \newcommand{\AND}{\unskip{}
+        \cleaders\copy\ANDbox\hskip\wd\ANDbox{}
+        \ignorespaces{}
+    }
+    \newsavebox\ANDbox{}
+    \sbox\ANDbox{$|$}
+
+    \begin{header}
+    {\fontsize{20pt}{24pt}\selectfont \textbf{Christian Garry}}\\[3pt]
+
+    \vspace{5 pt}
+
+    % --- Row 1: tagline (single line) ---
+    \noindent\makebox[\textwidth][c]{%
+        \small
+        Quantitative Researcher --- stochastic control \textperiodcentered{} pricing models \textperiodcentered{} machine learning
+    }\\[2pt]
+
+    % --- Row 2: contacts (single line) ---
+    \noindent\makebox[\textwidth][c]{%
+        \small
+        \mbox{\hrefWithoutArrow{mailto:christiangarry.southafrica@gmail.com}{christiangarry.southafrica@gmail.com}}~\textbar{}~\mbox{\hrefWithoutArrow{tel:+447932326827}{+44 79 3232 6827}}~\textbar{}~\mbox{\hrefWithoutArrow{https://christiangarry.com}{christiangarry.com}}~\textbar{}~\mbox{\hrefWithoutArrow{https://www.linkedin.com/in/christian-tt-garry/}{linkedin.com/in/christian-tt-garry}}
+    }
+    \end{header}
+
+    \vspace{-0.35 cm}
+
+
+\section*{Profile}
+
+\begin{onecolentry}
+Quantitative-finance researcher (MSc Scientific Computing, Distinction track \textasciitilde{}86\%) who builds and validates \textbf{models, strategies, and systems for pricing and trading}. My dissertation develops \textbf{deep solvers for a competitive market-making game} --- pricing and quoting under inventory risk and mean-field competition --- validated to \textbf{0.135\%} against an exact benchmark, and studies how \textbf{trading-strategy learning} behaves via multi-agent reinforcement learning, with a reproducible, statistically-significant finding on equilibrium vs. learned spreads. A strong Python programmer with deep grounding in \textbf{stochastic control, probability/statistics, optimisation, and time-series}, a genuine research track record (a 10-chapter dissertation + three standalone papers), and a precise, honest communication style.
+\end{onecolentry}
+\vspace{0.06 cm}
+
+\section*{Research}
+
+\begin{onecolentry}
+\textbf{Deep BSDEs for Mean-Field Market Making --- MSc Dissertation, Durham University} \textperiodcentered{} \textit{2026}\\[2pt]
+\textit{Quantitative finance $\times$ stochastic control $\times$ machine learning \textperiodcentered{} \href{https://github.com/cgarryZA/MFG-BSDE-Equilibrium}{github.com/cgarryZA/MFG-BSDE-Equilibrium}}
+\end{onecolentry}
+\vspace{0.06 cm}
+\begin{onecolentry}
+\begin{highlights}
+  \item Built \textbf{models for pricing and quoting} in the Cont--Xiong dealer market-making game --- intensity-controlled fills, inventory risk, mean-field competition --- using deep backward-SDE-with-jumps solvers; \textbf{validated to 0.135\% spread / 0.216\% value error} against an exact benchmark and \textbf{scaled to \textasciitilde{}5,000 agents} (mean-field rate O(1/$\surd$N) confirmed) where grid/PDE methods are infeasible.
+  \item \textbf{Studied trading-strategy learning dynamics:} trained \textbf{20 seeded multi-agent RL (decentralised MADDPG)} agents on the same game $\rightarrow$ population mean spread \textbf{1.866} (95\% CI [1.654, 2.072]), above both the competitive Nash anchor (1.515) and the cartel level (1.593); \textbf{t=3.22, p=0.0022}, Cohen's d=0.72, surviving Bonferroni \& Holm correction. Established that the game has a \textit{unique} competitive equilibrium with no supra-cartel fixed point --- so the effect is a property of the \textbf{learning algorithm}, not the market (direct algorithmic-collusion / surveillance relevance: FCA, PRA, SR 11-7).
+  \item \textbf{Feature/architecture engineering for financial-dataset models:} identified and fixed three failure modes (generator bypass, BatchNorm erasure, DeepSets collapse) that silently destroy the population/competition signal in mean-field networks; validated across a \textbf{26-experiment} battery (post-fix, learned competition factor varies 4$\times$ and optimal quotes shift 2$\times$).
+  \item Developed an \textbf{a-posteriori error-certification theory} (a computable estimator with two-sided guarantees and a certified stopping rule) and machine-checked its core in \textbf{Lean 4 / Mathlib} (\textasciitilde{}36k LOC, axiom-clean) --- rigour that carries straight into trusting a model's numbers.
+  \item Built \textbf{reproducible-research infrastructure}: a CI-guarded data$\rightarrow$results pipeline (build fails if any cited number drifts), a GPU job queue, and remote automated job submission.
+\end{highlights}
+\end{onecolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+\textbf{Silicon Carbide JFET CPU --- MEng Dissertation, Durham University} \textperiodcentered{} \textit{2023--24 \textperiodcentered{} 84\%}
+\end{onecolentry}
+\vspace{0.06 cm}
+\begin{onecolentry}
+\begin{highlights}
+  \item Built a custom 4-bit CPU and its \textbf{full verification toolchain} (compiler, assembler, automation, emulator-parity + waveform-to-state checks) --- instruction-level validation against a behavioural reference. Demonstrates end-to-end engineering rigour and modelling-to-validation discipline.
+\end{highlights}
+\end{onecolentry}
+\vspace{0.10 cm}
+
+\section*{Education}
+
+\begin{onecolentry}
+\textbf{MSc Scientific Computing \& Data Analysis (AI for Engineering) --- Durham University} \textperiodcentered{} \textit{Sep 2025 -- Sep 2026}
+\end{onecolentry}
+\vspace{0.06 cm}
+\begin{onecolentry}
+\begin{highlights}
+  \item Tracking \textbf{Distinction} (\textasciitilde{}86\%). Directly relevant coursework: \textbf{Bayesian inference \& statistics} (MCMC, Gaussian processes --- incl. a high-dimensional gene-expression \textit{survival regression} and \textbf{time-series / regression} modelling), \textbf{convex optimisation} (duality, KKT) applied to estimation \& SVMs, \textbf{random forests/boosting \& deep learning}, and \textbf{GPU/HPC performance engineering} (for large financial datasets).
+  \item Standout marks: \textbf{95\%} Performance/GPU, \textbf{94\%} Machine Learning \& Statistics, \textbf{\textasciitilde{}89\%} in both Advanced Bayesian ML modules. Python, C, R.
+\end{highlights}
+\end{onecolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+\textbf{Mathematics modules (NetMath) --- University of Illinois Urbana-Champaign} \textperiodcentered{} \textit{2026}
+\end{onecolentry}
+\vspace{0.06 cm}
+\begin{onecolentry}
+\begin{highlights}
+  \item Credit-bearing, exam-assessed proof-based mathematics taken alongside the MSc: \textbf{MATH 314} Introduction to Higher Mathematics (in progress, current average 100\%) and \textbf{MATH 447} Real Analysis (upcoming) --- sequences and convergence, metric spaces, compactness, and Riemann integration. Strengthens the rigorous-analysis foundations under stochastic calculus and probability.
+\end{highlights}
+\end{onecolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+\textbf{MEng Electronic Engineering --- Durham University} \textperiodcentered{} \textit{2020--2024 \textperiodcentered{} Upper Second-Class Honours (2:1)}
+\end{onecolentry}
+\vspace{0.06 cm}
+
+\section*{Experience}
+
+\begin{onecolentry}
+\textbf{Graduate Communications Engineer --- Siemens PLC} \textperiodcentered{} \textit{Sep 2024 -- Present}
+\end{onecolentry}
+\vspace{0.06 cm}
+\begin{onecolentry}
+\begin{highlights}
+  \item Designed and built a \textbf{Retrieval-Augmented Generation platform from scratch in Python} (local LLMs + Qdrant vector search) over large technical corpora --- \textbf{cutting engineer time-to-answer by >90\%}, with transparent, reproducible behaviour.
+  \item Implemented \textbf{C/C++ data-exchange / networking components} (TCP/IP, serial) for digital-twin simulation environments.
+\end{highlights}
+\end{onecolentry}
+\vspace{0.10 cm}
+
+\section*{Technical Skills}
+
+\begin{onecolentry}
+\textbf{Quantitative / stochastic:} BSDEs/BSDEJs, McKean--Vlasov \& mean-field games, HJB$\leftrightarrow$BSDE stochastic control, Monte-Carlo \& finite-difference numerics, market microstructure / optimal market making, inventory risk, fixed-point/equilibrium computation.\\[2pt]
+\textbf{Statistics / ML:} Bayesian inference (MCMC, Gaussian processes), time-series \& regression modelling, feature engineering, random forests/boosting, deep learning (PyTorch), multi-agent RL (MADDPG), hypothesis testing with multiple-comparison correction, bootstrap CIs.\\[2pt]
+\textbf{Engineering:} Python (strong), C++, C, R; GPU/CUDA \& HPC (roofline, vectorisation, Slurm); Git/CI, reproducible-research pipelines; Lean 4 / Mathlib.
+\end{onecolentry}
+\vspace{0.06 cm}
+\end{document}
