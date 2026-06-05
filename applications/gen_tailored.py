@@ -34,8 +34,7 @@ SIC = r"""
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Designed and simulated a 4-bit CPU in SiC JFET logic (LTspice) for extreme-temperature/radiation computing.
-    \item Built the full verification toolchain --- C++ compiler, assembler, Python automation, emulator-parity + waveform-to-state checks.
+    \item Designed and simulated a 4-bit CPU in SiC JFET logic (LTspice) and built the full verification toolchain (C++ compiler, assembler, Python automation, emulator-parity + waveform-to-state checks).
   \end{highlights}
 \end{onecolentry}
 """
@@ -54,8 +53,12 @@ MSC_HEADER = r"""
 
 UIUC = r"""
 \begin{twocolentry}
+  {NetMath, Online}
+  \textbf{Mathematics Modules}
+\end{twocolentry}
+\begin{twocolentry}
   {Apr 2026~--~Dec 2026}
-  \textbf{University of Illinois Urbana-Champaign} --- Mathematics Modules (NetMath, online)
+  \textbf{University of Illinois Urbana-Champaign}
 \end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
@@ -65,21 +68,40 @@ UIUC = r"""
 \end{onecolentry}
 """
 
+TUTOR = r"""
+\begin{twocolentry}
+  {Durham, United Kingdom}
+  \textbf{Industrial Tutor}
+\end{twocolentry}
+\begin{twocolentry}
+  {Sep 2025~--~Present}
+  \textbf{Durham University, Dept. of Engineering}
+\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Lead weekly design tutorials, mentoring engineering teams on feasibility-driven decisions and giving structured feedback on assumptions and justification quality.
+  \end{highlights}
+\end{onecolentry}
+"""
+
+CERTS = r"""
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{MITx 15.455x} --- Mathematical Methods for Quantitative Finance \textit{(in progress)}; \textbf{Columbia} --- Introduction to Financial Engineering \& Risk Management.
+  \end{highlights}
+\end{onecolentry}
+"""
+
 MENG = r"""
 \begin{twocolentry}
   {Durham, United Kingdom}
-  \textbf{MEng Electronic Engineering}
+  \textbf{MEng Electronic Engineering} --- Upper Second-Class Honours (2:1)
 \end{twocolentry}
 \begin{twocolentry}
   {Sep 2020~--~Jun 2024}
   \textbf{Durham University}
 \end{twocolentry}
-\vspace{0.10 cm}
-\begin{onecolentry}
-  \begin{highlights}
-    \item Upper Second-Class Honours (2:1). Dissertation: \textit{Silicon Carbide JFET CPU} (see Research).
-  \end{highlights}
-\end{onecolentry}
 """
 
 SIEMENS = r"""
@@ -102,7 +124,7 @@ SIEMENS = r"""
 
 
 def section(title, *blocks):
-    return f"\n\\section*{{{title}}}\n" + "\n\\vspace{0.16 cm}\n".join(blocks)
+    return f"\n\\section*{{{title}}}\n" + "\n\\vspace{0.08 cm}\n".join(blocks)
 
 
 def profile(text):
@@ -127,8 +149,9 @@ ML_DISS = r"""
 \begin{onecolentry}
   \begin{highlights}
     \item Built deep backward-SDE-with-jumps solvers (PyTorch) for a competitive mean-field market-making game (Cont--Xiong); matched the exact solution to 0.135\% spread error and scaled to \textasciitilde5{,}000 agents.
-    \item \textbf{Tinkered architectures into working models:} diagnosed and fixed three failure modes that silently kill the mean-field signal (generator bypass, BatchNorm erasure, DeepSets collapse); validated over a 26-experiment ablation battery, with the error theory machine-checked in Lean 4 / Mathlib (\textasciitilde36k LOC).
-    \item 20-seed multi-agent-RL (MADDPG) study: learned spreads reach \textbf{supra-cartel} (t=3.22, p=0.0022) --- collusion is a property of the learning dynamics, not the market equilibrium.
+    \item \textbf{Tinkered architectures into working models:} diagnosed and fixed three failure modes that silently kill the mean-field signal (generator bypass, BatchNorm erasure, DeepSets collapse); post-fix the learned competition factor varies 4$\times$ and quotes shift 2$\times$ (26-experiment validation).
+    \item 20-seed multi-agent-RL (MADDPG) study: learned spreads reach \textbf{supra-cartel} (t=3.22, p=0.0022, surviving Bonferroni \& Holm) --- collusion is a property of the learning dynamics, not the market equilibrium.
+    \item Developed an a-posteriori error-certification theory for deep-BSDE solvers (computable estimator, two-sided guarantees, certified stop rule); core machine-checked in Lean 4 / Mathlib (\textasciitilde36k LOC, axiom-clean).
   \end{highlights}
 \end{onecolentry}
 """
@@ -136,8 +159,7 @@ ML_DISS = r"""
 ML_MSC = MSC_HEADER + r"""
 \begin{onecolentry}
   \begin{highlights}
-    \item Tracking Distinction --- average \textasciitilde86\% (95\% performance/GPU, 94\% machine learning \& statistics, \textasciitilde89\% advanced Bayesian ML).
-    \item \textbf{Focus:} Bayesian inference (MCMC, Gaussian processes), deep learning (CNNs, Transformers, diffusion), convex optimisation (duality, KKT), GPU/HPC. Python, C, R.
+    \item Tracking Distinction --- average \textasciitilde86\% (95\% performance/GPU, 94\% ML \& statistics, \textasciitilde89\% advanced Bayesian ML); coverage: Bayesian inference, deep learning, convex optimisation (duality, KKT), GPU/HPC.
   \end{highlights}
 \end{onecolentry}
 """
@@ -153,8 +175,8 @@ ML_SKILLS = r"""
 ML_BODY = (
     section("Research", ML_DISS, SIC)
     + section("Education", ML_MSC, UIUC, MENG)
-    + section("Experience", SIEMENS)
-    + section("Technical Skills", ML_SKILLS)
+    + section("Experience", SIEMENS, TUTOR)
+    + section("Technical Skills \\& Certifications", ML_SKILLS, CERTS)
 )
 
 # ----------------------------------------------------------------------------
@@ -176,7 +198,8 @@ QUANT_DISS = r"""
   \begin{highlights}
     \item Built \textbf{models for pricing and quoting} in a competitive market-making game (Cont--Xiong) under inventory risk and mean-field competition; validated to 0.135\% spread error vs an exact benchmark and scaled to \textasciitilde5{,}000 agents.
     \item 20-seed multi-agent-RL (MADDPG) \textbf{trading-strategy} study: learned spreads exceed the cartel level (t=3.22, p=0.0022) --- an algorithmic-collusion finding with market-surveillance relevance (FCA/PRA/SR 11-7).
-    \item Engineered the population/competition features naive networks suppress (three fixed failure modes, 26-experiment validation); error theory machine-checked in Lean 4 / Mathlib (\textasciitilde36k LOC).
+    \item Engineered the population/competition features naive networks suppress (three fixed failure modes, 26-experiment validation); post-fix, learned competition factor varies 4$\times$ and quotes shift 2$\times$.
+    \item Developed an a-posteriori error-certification theory for deep-BSDE solvers (computable estimator, two-sided guarantees, certified training-stop rule); core machine-checked in Lean 4 / Mathlib (\textasciitilde36k LOC, axiom-clean).
   \end{highlights}
 \end{onecolentry}
 """
@@ -184,8 +207,7 @@ QUANT_DISS = r"""
 QUANT_MSC = MSC_HEADER + r"""
 \begin{onecolentry}
   \begin{highlights}
-    \item Tracking Distinction --- average \textasciitilde86\% (95\% performance/GPU, 94\% machine learning \& statistics, \textasciitilde89\% advanced Bayesian ML).
-    \item \textbf{Relevant:} Bayesian statistics (MCMC, Gaussian processes), \textbf{time-series \& regression} (incl. a high-dimensional survival regression), convex optimisation (duality, KKT), GPU/HPC. Python, C, R.
+    \item Tracking Distinction --- average \textasciitilde86\% (95\% performance/GPU, 94\% ML \& statistics, \textasciitilde89\% advanced Bayesian ML); coverage: Bayesian statistics, \textbf{time-series \& regression} (incl. high-dim. survival regression), convex optimisation, GPU/HPC.
   \end{highlights}
 \end{onecolentry}
 """
@@ -201,8 +223,8 @@ QUANT_SKILLS = r"""
 QUANT_BODY = (
     section("Research", QUANT_DISS, SIC)
     + section("Education", QUANT_MSC, UIUC, MENG)
-    + section("Experience", SIEMENS)
-    + section("Technical Skills", QUANT_SKILLS)
+    + section("Experience", SIEMENS, TUTOR)
+    + section("Technical Skills \\& Certifications", QUANT_SKILLS, CERTS)
 )
 
 ROLES = {
