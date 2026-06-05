@@ -54,12 +54,8 @@ MSC_HEADER = r"""
 
 UIUC = r"""
 \begin{twocolentry}
-  {Online (Urbana-Champaign, USA)}
-  \textbf{Mathematics Modules (NetMath)}
-\end{twocolentry}
-\begin{twocolentry}
   {Apr 2026~--~Dec 2026}
-  \textbf{University of Illinois Urbana-Champaign}
+  \textbf{University of Illinois Urbana-Champaign} --- Mathematics Modules (NetMath, online)
 \end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
