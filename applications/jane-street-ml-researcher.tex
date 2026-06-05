@@ -141,7 +141,7 @@
     % --- Row 1: tagline (single line) ---
     \noindent\makebox[\textwidth][c]{%
         \small
-        Machine Learning Researcher --- stochastic control \textperiodcentered{} deep learning \textperiodcentered{} multi-agent RL
+        Machine Learning Researcher~\textbar{}~Stochastic Control · Deep Learning · Multi-Agent RL
     }\\[2pt]
 
     % --- Row 2: contacts (single line) ---
@@ -154,90 +154,120 @@
     \vspace{-0.35 cm}
 
 
-\section*{Profile}
-
-\begin{onecolentry}
-MSc Scientific Computing researcher (Distinction track, \textasciitilde{}86\%) working at the intersection of \textbf{deep learning, stochastic control, and quantitative finance}. My dissertation builds and debugs \textbf{deep neural solvers for a competitive market-making game}, validates them to \textbf{0.135\%} against an exact benchmark, and uses \textbf{multi-agent reinforcement learning} to study how trading algorithms learn to price --- finding a reproducible, statistically-significant \textit{supra-cartel} effect. I move fluently between \textbf{model architecture, feature/transformation design, and stochastic-control theory}, and I hold the work to a high evidentiary bar: ablation batteries, multiple-comparison-corrected statistics, and a machine-checked error theory. Strong communicator --- a 10-chapter dissertation plus three standalone papers.
-\end{onecolentry}
-\vspace{0.06 cm}
-
 \section*{Research}
 
-\begin{onecolentry}
-\textbf{Deep BSDEs for Mean-Field Market Making --- MSc Dissertation, Durham University} \textperiodcentered{} \textit{2026}\\[2pt]
-\textit{Stochastic control $\times$ deep learning $\times$ multi-agent RL \textperiodcentered{} \href{https://github.com/cgarryZA/MFG-BSDE-Equilibrium}{github.com/cgarryZA/MFG-BSDE-Equilibrium}}
-\end{onecolentry}
-\vspace{0.06 cm}
-\begin{onecolentry}
-\begin{highlights}
-  \item Built \textbf{deep backward-SDE-with-jumps solvers} (PyTorch) for the Cont--Xiong dealer market-making game --- pricing/quoting under inventory risk and mean-field competition --- matching the exact tabular solution to \textbf{0.135\% spread / 0.216\% value error} and \textbf{scaling to \textasciitilde{}5,000 agents} where grid methods are infeasible.
-  \item \textbf{Tinkered architectures into working models:} identified, characterised (two as propositions) and fixed \textbf{three independent failure modes} that silently kill the mean-field signal in na\"{\i}ve networks --- \textit{generator bypass} (gradient path severed), \textit{BatchNorm erasure} (zero-variance broadcast features), and \textit{DeepSets collapse} (symmetric inputs cancelling at O(1/N)). Post-fix, the learned competition factor varies 4$\times$ and optimal quotes shift 2$\times$; validated by a \textbf{26-experiment ablation battery}.
-  \item \textbf{Trading-strategy learning dynamics:} trained \textbf{20 seeded decentralised-MADDPG} agents on the same game $\rightarrow$ mean spread \textbf{1.866} (95\% CI [1.654, 2.072]), above both Nash (1.515) and cartel (1.593); \textbf{t=3.22, p=0.0022}, Cohen's d=0.72, surviving Bonferroni \& Holm. The game has a unique competitive equilibrium with no supra-cartel fixed point --- so the effect is a property of the \textbf{learning algorithm}, not the market (direct algorithmic-collusion / surveillance relevance).
-  \item Developed an \textbf{a-posteriori error-certification theory} for deep-BSDE solvers --- a computable residual estimator two-sidedly equivalent to the true error, with no spurious minima and a certified training-stop rule --- and \textbf{machine-checked its core in Lean 4 / Mathlib} (\textasciitilde{}36k LOC, axiom-clean; 4-wave adversarial audit caught a real soundness bug).
-  \item Built the \textbf{reproducible-research infrastructure}: a CI-guarded data$\rightarrow$paper pipeline (build fails if any cited number drifts from its source), a GPU overnight job queue, and remote automated job submission.
-\end{highlights}
-\end{onecolentry}
+\begin{twocolentry}
+  {Durham, United Kingdom}
+  \textbf{Deep BSDEs for Mean-Field Market Making}
+\end{twocolentry}
+\begin{twocolentry}
+  {2026~--~MSc Dissertation}
+  \textbf{Durham University}
+\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
-\textbf{Silicon Carbide JFET CPU --- MEng Dissertation, Durham University} \textperiodcentered{} \textit{2023--24 \textperiodcentered{} 84\%}
+  \begin{highlights}
+    \item Built deep backward-SDE-with-jumps solvers (PyTorch) for a competitive mean-field market-making game (Cont--Xiong); matched the exact solution to 0.135\% spread error and scaled to \textasciitilde5{,}000 agents.
+    \item \textbf{Tinkered architectures into working models:} diagnosed and fixed three failure modes that silently kill the mean-field signal (generator bypass, BatchNorm erasure, DeepSets collapse); validated over a 26-experiment ablation battery, with the error theory machine-checked in Lean 4 / Mathlib (\textasciitilde36k LOC).
+    \item 20-seed multi-agent-RL (MADDPG) study: learned spreads reach \textbf{supra-cartel} (t=3.22, p=0.0022) --- collusion is a property of the learning dynamics, not the market equilibrium.
+  \end{highlights}
 \end{onecolentry}
-\vspace{0.06 cm}
-\begin{onecolentry}
-\begin{highlights}
-  \item Designed and simulated a 4-bit CPU in SiC JFET logic and built the \textbf{full verification toolchain} (C++ compiler, assembler, Python automation, emulator parity + waveform-to-state reconstruction) --- instruction-level validation against a behavioural reference. Engineering rigour from device models to verified system behaviour.
-\end{highlights}
-\end{onecolentry}
+
+\vspace{0.16 cm}
+
+\begin{twocolentry}
+  {Durham, United Kingdom}
+  \textbf{Silicon Carbide JFET CPU}
+\end{twocolentry}
+\begin{twocolentry}
+  {Oct 2023~--~Apr 2024}
+  \textbf{MEng Dissertation (84\%)}
+\end{twocolentry}
 \vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Designed and simulated a 4-bit CPU in SiC JFET logic (LTspice) for extreme-temperature/radiation computing.
+    \item Built the full verification toolchain --- C++ compiler, assembler, Python automation, emulator-parity + waveform-to-state checks.
+  \end{highlights}
+\end{onecolentry}
 
 \section*{Education}
 
+\begin{twocolentry}
+  {Durham, United Kingdom}
+  \textbf{MSc Scientific Computing \& Data Analysis (AI for Engineering)}
+\end{twocolentry}
+\begin{twocolentry}
+  {Sep 2025~--~Exp. Sep 2026}
+  \textbf{Durham University}
+\end{twocolentry}
+\vspace{0.10 cm}
+
 \begin{onecolentry}
-\textbf{MSc Scientific Computing \& Data Analysis (AI for Engineering) --- Durham University} \textperiodcentered{} \textit{Sep 2025 -- Sep 2026}
+  \begin{highlights}
+    \item Tracking Distinction --- average \textasciitilde86\% (95\% performance/GPU, 94\% machine learning \& statistics, \textasciitilde89\% advanced Bayesian ML).
+    \item \textbf{Focus:} Bayesian inference (MCMC, Gaussian processes), deep learning (CNNs, Transformers, diffusion), convex optimisation (duality, KKT), GPU/HPC. Python, C, R.
+  \end{highlights}
 \end{onecolentry}
-\vspace{0.06 cm}
-\begin{onecolentry}
-\begin{highlights}
-  \item Tracking \textbf{Distinction} (\textasciitilde{}86\% across completed modules). Standout marks: \textbf{95\%} Performance Modelling/Vectorisation/GPU, \textbf{94\%} Machine Learning \& Statistics, \textbf{\textasciitilde{}89\%} in both Advanced Bayesian ML modules.
-  \item Coverage directly relevant to ML research on large datasets: \textbf{Bayesian inference} (MCMC, variational methods, Gaussian processes), \textbf{deep learning} (CNNs, Transformers, diffusion, LoRA), \textbf{convex optimisation} (duality, KKT) applied to estimation \& SVMs, \textbf{random forests/boosting}, and \textbf{GPU/HPC performance engineering} (roofline, AVX-512, CUDA, LIKWID).
-  \item Python, C, R; reproducible, tested workflows.
-\end{highlights}
-\end{onecolentry}
+
+\vspace{0.16 cm}
+
+\begin{twocolentry}
+  {Online (Urbana-Champaign, USA)}
+  \textbf{Mathematics Modules (NetMath)}
+\end{twocolentry}
+\begin{twocolentry}
+  {Apr 2026~--~Dec 2026}
+  \textbf{University of Illinois Urbana-Champaign}
+\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
-\textbf{Mathematics modules (NetMath) --- University of Illinois Urbana-Champaign} \textperiodcentered{} \textit{2026}
+  \begin{highlights}
+    \item \textbf{MATH 314} Higher Mathematics \textit{(in progress, 100\%)} \& \textbf{MATH 447} Real Analysis \textit{(upcoming)} --- proof techniques, metric spaces, compactness, Riemann integration.
+  \end{highlights}
 \end{onecolentry}
-\vspace{0.06 cm}
-\begin{onecolentry}
-\begin{highlights}
-  \item Credit-bearing, exam-assessed proof-based mathematics taken alongside the MSc: \textbf{MATH 314} Introduction to Higher Mathematics (in progress, current average 100\%) and \textbf{MATH 447} Real Analysis (upcoming) --- sequences and convergence, metric spaces, compactness, and Riemann integration. Deepens the analytic foundations under the stochastic-control and ML theory.
-\end{highlights}
-\end{onecolentry}
+
+\vspace{0.16 cm}
+
+\begin{twocolentry}
+  {Durham, United Kingdom}
+  \textbf{MEng Electronic Engineering}
+\end{twocolentry}
+\begin{twocolentry}
+  {Sep 2020~--~Jun 2024}
+  \textbf{Durham University}
+\end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
-\textbf{MEng Electronic Engineering --- Durham University} \textperiodcentered{} \textit{2020--2024 \textperiodcentered{} Upper Second-Class Honours (2:1)}
+  \begin{highlights}
+    \item Upper Second-Class Honours (2:1). Dissertation: \textit{Silicon Carbide JFET CPU} (see Research).
+  \end{highlights}
 \end{onecolentry}
-\vspace{0.06 cm}
 
 \section*{Experience}
 
-\begin{onecolentry}
-\textbf{Graduate Communications Engineer --- Siemens PLC} \textperiodcentered{} \textit{Sep 2024 -- Present}
-\end{onecolentry}
-\vspace{0.06 cm}
-\begin{onecolentry}
-\begin{highlights}
-  \item Designed and built a \textbf{Retrieval-Augmented Generation platform from scratch in Python} (local LLMs via Ollama + Qdrant vector search) over large protocol specs and source trees --- \textbf{cutting engineer time-to-answer by >90\%}, with an emphasis on transparent, reproducible behaviour.
-  \item Implemented \textbf{C/C++ communication components} (TCP/IP, serial) for digital-twin simulation, streaming data between simulated systems and PC tooling.
-\end{highlights}
-\end{onecolentry}
+\begin{twocolentry}
+  {Hebburn, United Kingdom}
+  \textbf{Graduate Communications Engineer}
+\end{twocolentry}
+\begin{twocolentry}
+  {Sep 2024~--~Present}
+  \textbf{Siemens PLC}
+\end{twocolentry}
 \vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Built a Python RAG platform from scratch (local LLMs, vector search) over large technical corpora --- cut engineer time-to-answer by >90\%.
+    \item Implemented C/C++ communication components (TCP/IP, serial) for digital-twin simulation.
+  \end{highlights}
+\end{onecolentry}
 
 \section*{Technical Skills}
 
 \begin{onecolentry}
-\textbf{ML / modelling:} deep learning (PyTorch, FBSNN/deep-BSDE, CNNs/Transformers), architecture \& feature debugging, multi-agent RL (MADDPG), Bayesian inference (MCMC, Gaussian processes), random forests/boosting, hypothesis testing with multiple-comparison correction, bootstrap CIs.\\[2pt]
-\textbf{Stochastic / quant:} BSDEs/BSDEJs, McKean--Vlasov \& mean-field games, HJB$\leftrightarrow$BSDE stochastic control, Monte-Carlo, market microstructure / optimal market making, inventory risk.\\[2pt]
-\textbf{Engineering:} Python, C++, C, R; GPU/CUDA, HPC (roofline, vectorisation, Slurm); Git/CI, reproducible-research pipelines; Lean 4 / Mathlib (formal verification).
+  \begin{highlights}
+    Deep learning (PyTorch, deep-BSDE/FBSNN, CNNs/Transformers) \textbullet{} architecture \& feature debugging \textbullet{} multi-agent RL (MADDPG) \textbullet{} Bayesian inference (MCMC, Gaussian processes) \textbullet{} stochastic control (HJB$\leftrightarrow$BSDE, mean-field games) \textbullet{} hypothesis testing with multiple-comparison correction \textbullet{} GPU/CUDA \& HPC \textbullet{} Python, C++, C, R \textbullet{} Lean 4 / Mathlib
+  \end{highlights}
 \end{onecolentry}
-\vspace{0.06 cm}
+
 \end{document}
