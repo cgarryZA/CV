@@ -36,6 +36,9 @@ MSc Scientific Computing researcher (Distinction track, ~86%) working at the int
 - Coverage directly relevant to ML research on large datasets: **Bayesian inference** (MCMC, variational methods, Gaussian processes), **deep learning** (CNNs, Transformers, diffusion, LoRA), **convex optimisation** (duality, KKT) applied to estimation & SVMs, **random forests/boosting**, and **GPU/HPC performance engineering** (roofline, AVX-512, CUDA, LIKWID).
 - Python, C, R; reproducible, tested workflows.
 
+**Mathematics modules (NetMath) — University of Illinois Urbana-Champaign** · *2026*
+- Credit-bearing, exam-assessed proof-based mathematics taken alongside the MSc: **MATH 314** Introduction to Higher Mathematics (in progress, current average 100%) and **MATH 447** Real Analysis (upcoming) — sequences and convergence, metric spaces, compactness, and Riemann integration. Deepens the analytic foundations under the stochastic-control and ML theory.
+
 **MEng Electronic Engineering — Durham University** · *2020–2024 · Upper Second-Class Honours (2:1)*
 
 ---
