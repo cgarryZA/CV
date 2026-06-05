@@ -168,12 +168,13 @@
 \begin{onecolentry}
   \begin{highlights}
     \item Built deep backward-SDE-with-jumps solvers (PyTorch) for a competitive mean-field market-making game (Cont--Xiong); matched the exact solution to 0.135\% spread error and scaled to \textasciitilde5{,}000 agents.
-    \item \textbf{Tinkered architectures into working models:} diagnosed and fixed three failure modes that silently kill the mean-field signal (generator bypass, BatchNorm erasure, DeepSets collapse); validated over a 26-experiment ablation battery, with the error theory machine-checked in Lean 4 / Mathlib (\textasciitilde36k LOC).
-    \item 20-seed multi-agent-RL (MADDPG) study: learned spreads reach \textbf{supra-cartel} (t=3.22, p=0.0022) --- collusion is a property of the learning dynamics, not the market equilibrium.
+    \item \textbf{Tinkered architectures into working models:} diagnosed and fixed three failure modes that silently kill the mean-field signal (generator bypass, BatchNorm erasure, DeepSets collapse); post-fix the learned competition factor varies 4$\times$ and quotes shift 2$\times$ (26-experiment validation).
+    \item 20-seed multi-agent-RL (MADDPG) study: learned spreads reach \textbf{supra-cartel} (t=3.22, p=0.0022, surviving Bonferroni \& Holm) --- collusion is a property of the learning dynamics, not the market equilibrium.
+    \item Developed an a-posteriori error-certification theory for deep-BSDE solvers (computable estimator, two-sided guarantees, certified stop rule); core machine-checked in Lean 4 / Mathlib (\textasciitilde36k LOC, axiom-clean).
   \end{highlights}
 \end{onecolentry}
 
-\vspace{0.16 cm}
+\vspace{0.08 cm}
 
 \begin{twocolentry}
   {Durham, United Kingdom}
@@ -186,8 +187,7 @@
 \vspace{0.10 cm}
 \begin{onecolentry}
   \begin{highlights}
-    \item Designed and simulated a 4-bit CPU in SiC JFET logic (LTspice) for extreme-temperature/radiation computing.
-    \item Built the full verification toolchain --- C++ compiler, assembler, Python automation, emulator-parity + waveform-to-state checks.
+    \item Designed and simulated a 4-bit CPU in SiC JFET logic (LTspice) and built the full verification toolchain (C++ compiler, assembler, Python automation, emulator-parity + waveform-to-state checks).
   \end{highlights}
 \end{onecolentry}
 
@@ -205,16 +205,19 @@
 
 \begin{onecolentry}
   \begin{highlights}
-    \item Tracking Distinction --- average \textasciitilde86\% (95\% performance/GPU, 94\% machine learning \& statistics, \textasciitilde89\% advanced Bayesian ML).
-    \item \textbf{Focus:} Bayesian inference (MCMC, Gaussian processes), deep learning (CNNs, Transformers, diffusion), convex optimisation (duality, KKT), GPU/HPC. Python, C, R.
+    \item Tracking Distinction --- average \textasciitilde86\% (95\% performance/GPU, 94\% ML \& statistics, \textasciitilde89\% advanced Bayesian ML); coverage: Bayesian inference, deep learning, convex optimisation (duality, KKT), GPU/HPC.
   \end{highlights}
 \end{onecolentry}
 
-\vspace{0.16 cm}
+\vspace{0.08 cm}
 
 \begin{twocolentry}
+  {NetMath, Online}
+  \textbf{Mathematics Modules}
+\end{twocolentry}
+\begin{twocolentry}
   {Apr 2026~--~Dec 2026}
-  \textbf{University of Illinois Urbana-Champaign} --- Mathematics Modules (NetMath, online)
+  \textbf{University of Illinois Urbana-Champaign}
 \end{twocolentry}
 \vspace{0.10 cm}
 \begin{onecolentry}
@@ -223,22 +226,16 @@
   \end{highlights}
 \end{onecolentry}
 
-\vspace{0.16 cm}
+\vspace{0.08 cm}
 
 \begin{twocolentry}
   {Durham, United Kingdom}
-  \textbf{MEng Electronic Engineering}
+  \textbf{MEng Electronic Engineering} --- Upper Second-Class Honours (2:1)
 \end{twocolentry}
 \begin{twocolentry}
   {Sep 2020~--~Jun 2024}
   \textbf{Durham University}
 \end{twocolentry}
-\vspace{0.10 cm}
-\begin{onecolentry}
-  \begin{highlights}
-    \item Upper Second-Class Honours (2:1). Dissertation: \textit{Silicon Carbide JFET CPU} (see Research).
-  \end{highlights}
-\end{onecolentry}
 
 \section*{Experience}
 
@@ -258,11 +255,36 @@
   \end{highlights}
 \end{onecolentry}
 
-\section*{Technical Skills}
+\vspace{0.08 cm}
+
+\begin{twocolentry}
+  {Durham, United Kingdom}
+  \textbf{Industrial Tutor}
+\end{twocolentry}
+\begin{twocolentry}
+  {Sep 2025~--~Present}
+  \textbf{Durham University, Dept. of Engineering}
+\end{twocolentry}
+\vspace{0.10 cm}
+\begin{onecolentry}
+  \begin{highlights}
+    \item Lead weekly design tutorials, mentoring engineering teams on feasibility-driven decisions and giving structured feedback on assumptions and justification quality.
+  \end{highlights}
+\end{onecolentry}
+
+\section*{Technical Skills \& Certifications}
 
 \begin{onecolentry}
   \begin{highlights}
     Deep learning (PyTorch, deep-BSDE/FBSNN, CNNs/Transformers) \textbullet{} architecture \& feature debugging \textbullet{} multi-agent RL (MADDPG) \textbullet{} Bayesian inference (MCMC, Gaussian processes) \textbullet{} stochastic control (HJB$\leftrightarrow$BSDE, mean-field games) \textbullet{} hypothesis testing with multiple-comparison correction \textbullet{} GPU/CUDA \& HPC \textbullet{} Python, C++, C, R \textbullet{} Lean 4 / Mathlib
+  \end{highlights}
+\end{onecolentry}
+
+\vspace{0.08 cm}
+
+\begin{onecolentry}
+  \begin{highlights}
+    \item \textbf{MITx 15.455x} --- Mathematical Methods for Quantitative Finance \textit{(in progress)}; \textbf{Columbia} --- Introduction to Financial Engineering \& Risk Management.
   \end{highlights}
 \end{onecolentry}
 
