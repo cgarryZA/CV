@@ -2,12 +2,12 @@
 cv: true
 id: dissertation-mfg-bsde-2026
 title: Deep BSDEs for Mean-Field Market Making (MSc Dissertation)
-date: 2026-01-15
+date: 2025-10-01
 type: research
 section: Research
 institution: Durham University
 location: Durham, United Kingdom
-period: 2026 (report Sep 2026)
+period: Oct 2025 – Sept 2026
 links.github: https://github.com/cgarryZA/MFG-BSDE-Equilibrium
 cover: assets\durham_university_logo.jpeg
 crosslinks:
