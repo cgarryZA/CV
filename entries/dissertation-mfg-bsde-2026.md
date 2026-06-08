@@ -48,9 +48,6 @@ A **~36,400-line, ~45-headline-theorem** formalisation with an axiom-clean core:
 **Research infrastructure I built**
 An **anti-staleness results pipeline** (committed result JSONs → LaTeX macros/tables via one generator, with a **CI guard** that fails the build if any paper number drifts from its data source); a **GPU overnight job queue/runner** with auto-retry; and **remote job submission** (push a spec → self-hosted GitHub Actions runner appends it under a lock). Per-result provenance SHAs, seed control, a commit-history logbook.
 
-**Honest scope** *(kept straight for interviews — the rigour is the selling point)*
-The headline solver numbers are **empirical validations against an exact benchmark**, not theorems. "Machine-checked / axiom-clean" applies to the **Lean mathematics only** (the Python's correspondence is checked by inspection + numerical cross-check). Nash uniqueness is **local/basin-level** (global uniqueness is precisely characterised as open). The MADDPG collusion result is a **statistical** finding (20 seeds, corrected significance, disclosed post-hoc test selection), not a theorem.
-
 **Skills demonstrated**
 Stochastic analysis (BSDEs/BSDEJs, McKean–Vlasov, propagation of chaos, mean-field games) · stochastic control (HJB↔BSDE, intensity control, fixed-point equilibria) · deep learning (deep-BSDE/FBSNN in PyTorch, conditional/mean-field architecture debugging) · multi-agent RL (MADDPG, Nash vs Pareto vs collusion) · quantitative finance (market microstructure, optimal market making, inventory risk; FCA/PRA/SR 11-7 framing) · formal methods (Lean 4 / Mathlib, adversarial proof auditing) · numerical methods & statistics (Monte-Carlo, multiple-comparison correction, bootstrap CIs) · research software engineering (CI-guarded data→paper pipeline, GPU orchestration, reproducible provenance).
 
