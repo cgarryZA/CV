@@ -1,5 +1,12 @@
 name: Build CV PDF + HTML
 
+# Builds the canonical CV on main, AND tailored per-application CVs on the jobs
+# domain's app/** branches. A tailoring commit writes iter-NN/selection.json
+# (see christiangarry-platform core/app/domains/jobs); that path triggers this
+# workflow on the branch, which builds a CV restricted to the selected entries
+# in the selected order (+ the tailored profile summary) and commits cv.pdf back
+# to the branch. Application.pdf_url then points at the built PDF.
+
 on:
   push:
     paths:
@@ -7,6 +14,7 @@ on:
       - "build_cv.py"
       - "build_html.py"
       - "**.tex"
+      - "iter-*/selection.json"
   workflow_dispatch:
 
 permissions:
@@ -28,19 +36,31 @@ jobs:
             texlive-fonts-recommended \
             texlive-fonts-extra
 
+      - name: Detect tailoring selection
+        run: |
+          latest=$(ls -d iter-*/ 2>/dev/null | sort | tail -1 || true)
+          if [ -n "$latest" ] && [ -f "${latest}selection.json" ]; then
+            echo "CV_SELECTION=${latest}selection.json" >> "$GITHUB_ENV"
+            echo "Tailored build from ${latest}selection.json"
+          else
+            echo "No selection.json — building the canonical CV"
+          fi
+
       - name: Build cv.tex
         run: python3 build_cv.py
 
       - name: Compile PDF
-        run: pdflatex cv.tex
+        run: pdflatex -interaction=nonstopmode cv.tex || pdflatex -interaction=nonstopmode cv.tex
 
-      - name: Build HTML
+      - name: Build HTML (canonical only)
+        if: env.CV_SELECTION == ''
         run: python3 build_html.py
 
       - name: Commit outputs
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
-          git add cv.pdf cv.html
-          git commit -m "Auto-build CV PDF + HTML" || echo "No changes"
+          git add cv.pdf
+          [ -f cv.html ] && git add cv.html || true
+          git commit -m "Auto-build CV${CV_SELECTION:+ (tailored)}" || echo "No changes"
           git push
