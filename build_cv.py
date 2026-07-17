@@ -278,7 +278,7 @@ PREAMBLE_LATEX = r"""
     % --- Row 2: contacts (single line) ---
     \noindent\makebox[\textwidth][c]{%
         \small
-        \mbox{\hrefWithoutArrow{mailto:christiangarry.southafrica@gmail.com}{christiangarry.southafrica@gmail.com}}~\textbar{}~\mbox{\hrefWithoutArrow{tel:+447932326827}{+44 79 3232 6827}}~\textbar{}~\mbox{\hrefWithoutArrow{https://christiangarry.com}{christiangarry.com}}~\textbar{}~\mbox{\hrefWithoutArrow{https://www.linkedin.com/in/christian-tt-garry/}{linkedin.com/in/christian-tt-garry}}
+        \mbox{\hrefWithoutArrow{mailto:christian@christiangarry.com}{christian@christiangarry.com}}~\textbar{}~\mbox{\hrefWithoutArrow{tel:+447932326827}{+44 79 3232 6827}}~\textbar{}~\mbox{\hrefWithoutArrow{https://christiangarry.com}{christiangarry.com}}~\textbar{}~\mbox{\hrefWithoutArrow{https://www.linkedin.com/in/christian-tt-garry/}{linkedin.com/in/christian-tt-garry}}
     }
     \end{header}
 
